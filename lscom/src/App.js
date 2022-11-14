@@ -1,18 +1,25 @@
 
+
+import React, { Component } from 'react';
+import Nav from './Tabs';
+import Content from './Content';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Lasershaft.com
-      </header>
-      <p className="App-subheader">
-        Coming soon to own on DVD and video.
-      </p>
-      <div className="box-body"><p className="box-body-text">WOW</p></div>
-    </div>
-  );
-}
+
+//        <nav where={location} />
+class App extends Component {
+  
+  render() {
+    var there = window.location.href.split('/')[3];
+    if (there === "") window.location.href = "Home";
+    return (
+      <div className="App">
+        <Nav />
+        <div id="contentSpacer" />
+        <Content />
+      </div>
+    );
+  };
+};
 
 export default App;

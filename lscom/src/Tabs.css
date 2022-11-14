@@ -1,0 +1,166 @@
+
+#navContainer {
+  font-family: 'roboto', 'sans-serif';
+  font-size: clamp(16pt, 5vw, 24pt);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2.5ex;
+  float: left;
+  width: 100vw;
+  margin-top: 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 2.5ex;
+}
+
+#nav {
+  display: none;
+}
+
+.navBar { 
+  background-color: #9999AA;
+  display: block;
+  height: 2.5ex;
+  padding-right: 6ex;
+}
+
+.NavHeader,
+.TabHider {
+  float: left; 
+  display: inline;
+  margin: 0px;
+}
+
+#tab-id-LSCOM {
+  width: auto;
+  float: right;
+  border-radius: 0px;
+  border-bottom-left-radius: 1.5vw;
+  margin: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.NavHeader {
+  text-align: left;
+  height: 4ex;
+  margin-left: 0.8em;
+  user-select: none;
+}
+
+.TabHider {
+  background-color: inherit;
+  --border-bottom-right-radius: 1ex;
+  width: 2em;
+  border-width: 0px; 
+  
+  height: inherit;
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  line-height: inherit;
+}
+
+#tabContainer {
+  line-height: 4ex;
+  color: lightgray;
+  vertical-align: middle;
+  font-size: 60%;
+  
+  --background-color: #2a2a55;
+  background-color: #9999AA;
+  padding-top: 2.5vmin;
+  padding-bottom: 2.5vmin;
+  width: calc(12em + 5vmin);
+  position: absolute;
+  border-bottom-right-radius: 1vw;
+  --border-top-right-radius: 1vw;
+  
+}
+
+.NavContainerOut #tabContainer {
+  transform: translateX(0);
+  transition: transform 0.6s;
+}
+
+.NavContainerIn #tabContainer {
+  transform: translateX(calc(-1*(12em + 5vmin)));
+  transition: transform 0.6s;
+}
+
+.Tab {
+  border-radius: 4pt;
+  border-width: 0px;
+  
+  font: inherit;
+  line-height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  
+  --background-color: #1111CC;
+  --color: lightgray;
+  height: clamp(24pt, 6.6vw, 40pt);
+  width: 12em;
+  
+  margin-left: 2.5vmin;
+  margin-right: 2.5vmin;
+  margin-bottom: 3px;
+  
+  padding-left: clamp(4pt, 1vw, 12pt);
+  padding-right: clamp(4pt, 1vw, 12pt);
+  padding-top: clamp(2pt, 0.5vw, 6pt);
+  padding-bottom: clamp(2pt, 0.5vw, 6pt);
+}
+
+.Tab,
+.TabHider {
+  background-color: #1111CC;
+  color: lightgray;
+  transition: background-color 0.2s;
+  transition: color 0.6s;
+}
+
+.NavContainerOut .TabHider {
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.2s;
+  transition: color 0.6s;
+}
+
+.Tab:hover,
+.TabHider:hover {
+  background-color: #AAAAFF;
+  transition: background-color 0.2s;
+}
+
+.Tab:active,
+.TabHider:active {
+  background-color: #CCCCFF;
+  color: #666666;
+  transition: background-color 0.2s;
+  transition: color 0.6s;
+}
+
+
+label {
+  visibility: hidden;
+  font-size: 0;
+}
+
+.NavSubheader {
+  font-size: clamp(10pt, 1.7vw, 12pt);
+  float: left;
+  display: block;
+  position: absolute;
+  transform: translate(1em, 0);
+}
+
+
+
+
+
+
+
+

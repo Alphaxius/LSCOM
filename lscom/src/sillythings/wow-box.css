@@ -1,0 +1,29 @@
+
+@keyframes box-body {
+  from {transform:scale(1,1);}
+  to {transform:scale(1.6,1);}
+}
+
+.box-body {
+  margin: auto;
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+  background: #1111CC;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 5vw;
+  animation-name: box-body;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.box-body-text {
+  font-size: 7.5vw;
+  transform: scale(1,1.45);
+  letter-spacing: 0.5vw;
+  font-family: 'blackletter';
+  text-align: center;
+  vertical-align: middle;
+  line-height:30vw;
+}
