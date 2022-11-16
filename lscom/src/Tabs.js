@@ -4,6 +4,7 @@
 
 import './Tabs.css';
 import React from 'react';
+import where from './location.js';
 
 
 /* consts */
@@ -85,8 +86,8 @@ const Tabs = () => {
   return (
     <div id="tabContainer">
       <Tab tabName="Lasershaft" />
-      <Tab tabName="Tools" />
       <Tab tabName="Blog" />
+      <Tab tabName="Tools" />
       <Tab tabName="Workspace" />
     </div>
   );
@@ -94,7 +95,7 @@ const Tabs = () => {
 
 const Nav = () => {
   
-  let there = window.location.href.split('/')[3];
+  let there = where;
   return (
     <span id="navContainer" className="NavContainerIn" >
       <span className="navBar">

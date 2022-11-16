@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import Nav from './Tabs';
 import Content from './Content';
+import where from './location';
 import './App.css';
 
 
@@ -10,7 +11,7 @@ import './App.css';
 class App extends Component {
   
   render() {
-    var there = window.location.href.split('/')[3];
+    var there = where;
     if (there === "") window.location.href = "Home";
     return (
       <div className="App">

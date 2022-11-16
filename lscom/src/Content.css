@@ -1,3 +1,7 @@
 
 .ContentContainer {
 }
+
+li {
+  list-style: none;
+}

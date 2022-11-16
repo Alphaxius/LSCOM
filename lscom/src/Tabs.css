@@ -1,10 +1,10 @@
 
 #navContainer {
   font-family: 'roboto', 'sans-serif';
-  font-size: clamp(16pt, 5vw, 24pt);
+  font-size: clamp(16pt, 10vw, 24pt);
   text-align: center;
   vertical-align: middle;
-  line-height: 2.5ex;
+  line-height: 2.75ex;
   float: left;
   width: 100vw;
   margin-top: 0px;
@@ -14,15 +14,11 @@
   height: 2.5ex;
 }
 
-#nav {
-  display: none;
-}
-
 .navBar { 
   background-color: #9999AA;
   display: block;
   height: 2.5ex;
-  padding-right: 6ex;
+  padding-right: 4.5em;
 }
 
 .NavHeader,
@@ -33,11 +29,14 @@
 }
 
 #tab-id-LSCOM {
-  width: auto;
+  width: 4.5em;
   float: right;
   border-radius: 0px;
-  border-bottom-left-radius: 1.5vw;
+  border-bottom-left-radius: 1ex;
+  height: 3.4ex;
+  line-height: 2.5ex;
   margin: 0px;
+  margin-right: -0.2em;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -54,13 +53,13 @@
   background-color: inherit;
   --border-bottom-right-radius: 1ex;
   width: 2em;
-  border-width: 0px; 
+  border-width: 0px;
   
   height: inherit;
   font: inherit;
   text-align: center;
   vertical-align: middle;
-  line-height: inherit;
+  line-height: 2.5ex;
 }
 
 #tabContainer {
@@ -71,9 +70,9 @@
   
   --background-color: #2a2a55;
   background-color: #9999AA;
-  padding-top: 2.5vmin;
-  padding-bottom: 2.5vmin;
-  width: calc(12em + 5vmin);
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  width: 10em;
   position: absolute;
   border-bottom-right-radius: 1vw;
   --border-top-right-radius: 1vw;
@@ -86,7 +85,7 @@
 }
 
 .NavContainerIn #tabContainer {
-  transform: translateX(calc(-1*(12em + 5vmin)));
+  transform: translateX(calc(-1*(12em + 5vw)));
   transition: transform 0.6s;
 }
 
@@ -95,14 +94,14 @@
   border-width: 0px;
   
   font: inherit;
-  line-height: inherit;
+  line-height: 3ex;
   text-align: center;
   vertical-align: middle;
   
   --background-color: #1111CC;
   --color: lightgray;
-  height: clamp(24pt, 6.6vw, 40pt);
-  width: 12em;
+  height: 4ex;
+  width: 8em;
   
   margin-left: 2.5vmin;
   margin-right: 2.5vmin;
@@ -147,14 +146,6 @@
 label {
   visibility: hidden;
   font-size: 0;
-}
-
-.NavSubheader {
-  font-size: clamp(10pt, 1.7vw, 12pt);
-  float: left;
-  display: block;
-  position: absolute;
-  transform: translate(1em, 0);
 }
 
 
