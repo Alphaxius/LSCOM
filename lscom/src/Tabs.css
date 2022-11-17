@@ -14,11 +14,11 @@
   height: 2.5ex;
 }
 
-.navBar { 
+.navBar {
   background-color: #9999AA;
   display: block;
   height: 2.5ex;
-  padding-right: 4.5em;
+  padding-right: 2em;
 }
 
 .NavHeader,
@@ -28,8 +28,7 @@
   margin: 0px;
 }
 
-#tab-id-LSCOM {
-  width: 4.5em;
+.HomeTab {
   float: right;
   border-radius: 0px;
   border-bottom-left-radius: 1ex;
@@ -40,6 +39,21 @@
   position: absolute;
   right: 0px;
   top: 0px;
+  width: 2.5em; 
+  border-width: 0px;
+  
+  font: inherit;
+  line-height: 0px;
+  text-align: center;
+  vertical-align: middle;
+  
+  background-color: #1111CC;
+  color: lightgray;
+  
+  padding-left: 0.1em;
+  padding-right: 0.4em;
+  padding-top: 0.1ex;
+  padding-bottom: 0.1ex;
 }
 
 .NavHeader {

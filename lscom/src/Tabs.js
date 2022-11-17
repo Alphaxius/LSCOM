@@ -4,7 +4,9 @@
 
 import './Tabs.css';
 import React from 'react';
-import where from './location.js';
+import where from './location';
+//import { orientation } from './location';
+
 
 
 /* consts */
@@ -18,10 +20,10 @@ const gt = ">";
 const dont = function(e) {};
 
 const navTo = function(e) {
-  let toWhere = e.target.value;
-  if (toWhere === "LSCOM" || toWhere === "Lasershaft") toWhere = "Home";
-  window.location.href = toWhere;
   closeTabs();
+  let toWhere = e.target.value;
+  if (toWhere === "LS") toWhere = "Home";
+  window.location.href = toWhere;
 };
 
 const createid = function(name) {
@@ -48,12 +50,17 @@ const closeTabs = function() {
   nc.setAttribute("class", "NavContainerIn");
   th.setAttribute("value", lt);
 };
-
+  /*
+const navBarName = function() {
+  if ( orientation() === "portrait" ) return "navBarP";
+  else return "navBarL";
+};
+*/
 
 /* elements */
 
 const tabHider = (
-    <input
+    <input 
       id="tabHider"
       type="button"
       className="TabHider"
@@ -81,11 +88,27 @@ const Tab = (tabName) => {
   );
 };
 
+const HomeTab = () => {
+  return (
+    <span>
+      <label htmlFor="tab-id-LS">"Home"</label>
+      <input
+        id="tab-id-LS"
+        type="button"
+        className="HomeTab"
+        value="LS"
+        onClick={navTo}
+        onChange={dont}
+      />
+    </span>
+  );
+};
+
 
 const Tabs = () => {
   return (
     <div id="tabContainer">
-      <Tab tabName="Lasershaft" />
+      <Tab tabName="Home" />
       <Tab tabName="Blog" />
       <Tab tabName="Tools" />
       <Tab tabName="Workspace" />
@@ -101,7 +124,7 @@ const Nav = () => {
       <span className="navBar">
         {tabHider}
         <header className="NavHeader">{there}</header>
-        <Tab tabName="LSCOM" />
+        <HomeTab />
       </span>
       <Tabs />
     </span>

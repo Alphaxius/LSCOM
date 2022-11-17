@@ -19,11 +19,7 @@ const blog = (
 const workspace = (
   <span>
   <li><a href="github.com/Alphaxius">Github</a></li>
-  <li><a href="mail.lasershaft.com">Mail</a></li>
-  <li><a href="cal.lasershaft.com">Calendar</a></li>
-  <li><a href="grp.lasershaft.com">Groups</a></li>
-  <li><a href="doc.lasershaft.com">Drive</a></li>
-  <li><a href="site.lasershaft.com">Site</a></li>
+  <li><a href="mailto:jess@lasershaft.com?subject=Business%20Inquiry">Email me</a></li>
   </span>
 );
 
@@ -31,8 +27,19 @@ const tools = (
   <p>Tools</p>
 );
 
+const forofor = (
+  <span>
+    <header>404</header>
+    <p>I don't know what you're looking for.</p>
+    <a href="https://www.lasershaft.com/Home">Go home.</a>
+  </span>
+);
+  
+
 const GetContent = () => {
   let there = where;
+  if (there.toLowerCase() === "404") return forofor;
+  if (there.toLowerCase() === "") return homepage;
   if (there.toLowerCase() === "home") return homepage;
   if (there.toLowerCase() === "blog") return blog;
   if (there.toLowerCase() === "tools") return tools;
@@ -44,6 +51,14 @@ const GetContent = () => {
   if (there.toLowerCase() === "cal") { window.location.href = "https://cal.lasershaft.com"; return; };
   if (there.toLowerCase() === "site") { window.location.href = "https://site.lasershaft.com"; return; };
   if (there.toLowerCase() === "github") { window.location.href = "https://github.com/Alphaxius"; return; };
+  if (there.toLowerCase() === "email") { window.location.href = "https://mail.lasershaft.com"; return; };
+  if (there.toLowerCase() === "calendar") { window.location.href = "https://cal.lasershaft.com"; return; };
+  if (there.toLowerCase() === "groups") { window.location.href = "https://grp.lasershaft.com"; return; };
+  if (there.toLowerCase() === "docs") { window.location.href = "https://doc.lasershaft.com"; return; };
+  if (there.toLowerCase() === "drive") { window.location.href = "https://doc.lasershaft.com"; return; };
+  if (there.toLowerCase() === "sites") { window.location.href = "https://site.lasershaft.com"; return; };
+  if (there.toLowerCase() === "gh") { window.location.href = "https://github.com/Alphaxius"; return; };
+  window.location.href = "404"; return;
 } 
 
 const Content = () => {

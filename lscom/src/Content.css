@@ -1,5 +1,8 @@
 
 .ContentContainer {
+  height: 88vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 li {
