@@ -1,10 +1,14 @@
 
 .ContentContainer {
-  height: 88vh;
   padding-left: 2vw;
   padding-right: 2vw;
 }
 
-li {
-  list-style: none;
+.HiderHidden {
+  display: none;
+}
+
+.HiderHeader {
+  user-select: none;
+  cursor: pointer;
 }

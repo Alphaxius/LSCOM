@@ -4,8 +4,6 @@
 
 import './Tabs.css';
 import React from 'react';
-import where from './location';
-//import { orientation } from './location';
 
 
 
@@ -60,14 +58,14 @@ const navBarName = function() {
 /* elements */
 
 const tabHider = (
-    <input 
-      id="tabHider"
-      type="button"
-      className="TabHider"
-      value={lt}
-      onClick={toggleTabs}
-      onChange={dont}
-    />
+  <input 
+    id="tabHider"
+    type="button"
+    className="TabHider"
+    value={lt}
+    onClick={toggleTabs}
+    onChange={dont}
+  />
 );
 
 const Tab = (tabName) => {
@@ -109,21 +107,24 @@ const Tabs = () => {
   return (
     <div id="tabContainer">
       <Tab tabName="Home" />
-      <Tab tabName="Blog" />
       <Tab tabName="Tools" />
-      <Tab tabName="Workspace" />
+      <Tab tabName="Blog" />
+      <Tab tabName="GitHub" />
+      <Tab tabName="LinkedIn" />
     </div>
   );
 };
 
-const Nav = () => {
+const Nav = (wl) => {
   
-  let there = where;
+  let title = wl.wl.p.slice(1).toLowerCase();
+  title = title.charAt(0).toUpperCase() + title.slice(1);
+
   return (
     <span id="navContainer" className="NavContainerIn" >
       <span className="navBar">
         {tabHider}
-        <header className="NavHeader">{there}</header>
+        <header className="NavHeader">{title}</header>
         <HomeTab />
       </span>
       <Tabs />

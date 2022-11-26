@@ -3,21 +3,33 @@
 import React, { Component } from 'react';
 import Nav from './Tabs';
 import Content from './Content';
-import where from './location';
+import Footer from './Footer';
 import './App.css';
 
 
-//        <nav where={location} />
 class App extends Component {
   
   render() {
-    var there = where;
-    if (there === "") window.location.href = "Home";
+    
+    let __o = window.location.origin;
+    let __p = window.location.pathname;
+    if (__p === "/") __p = "/Home";
+    let __q = window.location.search;
+    let __h = window.location.hash;
+
+    const wl = {
+      o: __o,
+      p: __p,
+      q: __q,
+      h: __h,
+    };
+    
     return (
       <div className="App">
-        <Nav />
+        <Nav wl={wl}/>
         <div id="contentSpacer" />
-        <Content />
+        <Content wl={wl}/>
+        <Footer />
       </div>
     );
   };
