@@ -8,7 +8,7 @@
   display: none;
 }
 
-.HiderHeader {
-  user-select: none;
-  cursor: pointer;
+a.HiderHidden,
+a.HiderNotHidden {
+  color: inherit;
 }

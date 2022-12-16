@@ -4,6 +4,7 @@
 
 import './Tabs.css';
 import React from 'react';
+import wl from './Loc';
 
 
 
@@ -21,7 +22,7 @@ const navTo = function(e) {
   closeTabs();
   let toWhere = e.target.value;
   if (toWhere === "LS") toWhere = "Home";
-  window.location.href = toWhere;
+  window.location.replace(wl.o+"/"+toWhere);
 };
 
 const createid = function(name) {
@@ -48,17 +49,14 @@ const closeTabs = function() {
   nc.setAttribute("class", "NavContainerIn");
   th.setAttribute("value", lt);
 };
-  /*
-const navBarName = function() {
-  if ( orientation() === "portrait" ) return "navBarP";
-  else return "navBarL";
-};
-*/
+
+
 
 /* elements */
 
 const tabHider = (
   <input 
+    title="Select navigation"
     id="tabHider"
     type="button"
     className="TabHider"
@@ -91,6 +89,7 @@ const HomeTab = () => {
     <span>
       <label htmlFor="tab-id-LS">"Home"</label>
       <input
+        title="Go home"
         id="tab-id-LS"
         type="button"
         className="HomeTab"
@@ -115,9 +114,9 @@ const Tabs = () => {
   );
 };
 
-const Nav = (wl) => {
+const Nav = () => {
   
-  let title = wl.wl.p.slice(1).toLowerCase();
+  let title = wl.p.slice(1).toLowerCase();
   title = title.charAt(0).toUpperCase() + title.slice(1);
 
   return (
