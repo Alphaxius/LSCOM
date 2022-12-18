@@ -6,3 +6,16 @@
 #contentSpacer {
   height: 12vh;
 }
+
+
+.FooterContainer {
+  padding: 2vw;
+}
+
+#footer_copyright {
+  float: left;
+}
+
+#footer_emailme {
+  float: right;
+}
