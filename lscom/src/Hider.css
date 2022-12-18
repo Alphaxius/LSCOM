@@ -1,0 +1,9 @@
+
+.HiderHidden {
+  display: none;
+}
+
+a.HiderHidden,
+a.HiderNotHidden {
+  color: inherit;
+}

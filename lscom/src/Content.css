@@ -3,12 +3,3 @@
   padding-left: 2vw;
   padding-right: 2vw;
 }
-
-.HiderHidden {
-  display: none;
-}
-
-a.HiderHidden,
-a.HiderNotHidden {
-  color: inherit;
-}
