@@ -12,10 +12,4 @@ const blogContent = (
   </div>
 );
 
-const test = () => {
-  consol.log('test');
-};
-
-export default test;
-
-export { blogContent }
+export default blogContent

@@ -106,7 +106,6 @@ const Tabs = () => {
   return (
     <div id="tabContainer">
       <Tab tabName="Home" />
-      <Tab tabName="Tools" />
       <Tab tabName="Blog" />
       <Tab tabName="GitHub" />
       <Tab tabName="LinkedIn" />
@@ -116,7 +115,7 @@ const Tabs = () => {
 
 const Nav = () => {
   
-  let title = wl.p.slice(1).toLowerCase();
+  let title = wl.i;
   title = title.charAt(0).toUpperCase() + title.slice(1);
 
   return (

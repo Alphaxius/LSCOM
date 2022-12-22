@@ -9,26 +9,13 @@ import './Content.css';
 import wowbox from './sillythings/wow-box';
 import HiderI from './Hider';
 import wl from './Loc';
-/*
-const blogFileName = './blog/'+wl.q['page']+'.js';
-let blogTemp;
-import(blogFileName)
-  .then((blogFile) => blogTemp = blogFile.blogContent);
-const blog = blogTemp;
-*/
-//const blog = blogContent;
-
 
 const blog = (
-	<iframe 
-		width="100%"
-		height="1000px"
-		src="https://script.google.com/macros/s/AKfycbxLBWpoiC0ljYbiYv7ikLLZV7h7figglu1qNmI5MkCNu3HtRaP_X1HKJQElDSINXLryJA/exec"
-	/>
+	<p className="ContentContainer">blog</p>
 );
 
 const homepage = (
-  <div>
+  <div className="ContentContainer">
     <h2>Welcome to <a href="https://lasershaft.com">Lasershaft.com!</a> where I put all my internet stuff.</h2>
     <br /><HiderI.HiderHeader headerText="About Me" idToHide="aboutMeHider" />
     <span className="HiderNotHidden" id="aboutMeHider">
@@ -50,48 +37,19 @@ const homepage = (
   </div>
 );
 
-const tools = (
-  <p>Tools</p>
-);
-
 const forofor = (
-  <div>
+  <div className="ContentContainer">
     <header>404</header>
     <p>I don't know what you're looking for.</p>
+		<p><i>{wl.foflast}</i> doesn't seem to exist</p>
     <a href="https://www.lasershaft.com/">Go home.</a>
   </div>
 );
-  
-
-const GetContent = () => {
-  const there = wl.p.toLowerCase();
-  if (there === "/404") return forofor;
-  if (there === "/home") return homepage;
-  if (there === "/blog") return blog;
-  if (there === "/tools") return tools;
-  if (there === "/showqueries") { console.log(wl.q); return; };
-  if (there === "/mail") { window.location.href = "https://mail.lasershaft.com"; return; };
-  if (there === "/doc") { window.location.href = "https://doc.lasershaft.com"; return; };
-  if (there === "/docs") { window.location.href = "https://doc.lasershaft.com"; return; };
-  if (there === "/drive") { window.location.href = "https://doc.lasershaft.com"; return; };
-  if (there === "/grp") { window.location.href = "https://grp.lasershaft.com"; return; };
-  if (there === "/groups") { window.location.href = "https://grp.lasershaft.com"; return; };
-  if (there === "/cal") { window.location.href = "https://cal.lasershaft.com"; return; };
-  if (there === "/calendar") { window.location.href = "https://cal.lasershaft.com"; return; };
-  if (there === "/site") { window.location.href = "https://site.lasershaft.com"; return; };
-  if (there === "/sites") { window.location.href = "https://site.lasershaft.com"; return; };
-  if (there === "/github") { window.location.href = "https://github.com/Alphaxius"; return; };
-  if (there === "/email") { window.location.href = "https://mail.lasershaft.com"; return; };
-  if (there === "/linkedin") { window.location.href = "https://linkedin.com/in/jesella-barrett"; return; };
-  window.location.replace(wl.o+"/404"+window.location.search+window.location.hash); return;
-} 
 
 const Content = () => {
-  return (
-    <div id="contentContainer" className="ContentContainer">
-      <GetContent />
-    </div>
-  );
+  if (wl.i === "404") return forofor;
+	if (wl.i === "home") return homepage;
+	if (wl.i === "blog") return blog;
 };
 
 export default Content;
