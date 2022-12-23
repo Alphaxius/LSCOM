@@ -76,7 +76,7 @@ if (__p.length === 0) {
 	to404();
 }
 
-console.log(__i);
+//console.log(__i);
 
 const wl = {
   o: __o,

@@ -2,7 +2,7 @@
 
 /* import */
 
-import './Tabs.css';
+//import './Tabs.css';
 import React from 'react';
 import wl from './Loc';
 

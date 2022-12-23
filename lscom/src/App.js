@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import Nav from './Tabs';
 import Content from './Content';
 //import Footer from './Footer';
-import wl from './Loc.js';
-import './App.css';
+//import wl from './Loc.js';
+//import './App.css';
 
 
 class App extends Component {

@@ -5,7 +5,7 @@
 
 
 
-import './Content.css';
+//import './Content.css';
 import wowbox from './sillythings/wow-box';
 import HiderI from './Hider';
 import wl from './Loc';
