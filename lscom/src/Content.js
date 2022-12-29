@@ -6,19 +6,41 @@
 
 
 //import './Content.css';
+import React from 'react';
 import wowbox from './sillythings/wow-box';
 import HiderI from './Hider';
-import wl from './Loc';
+import wl, {url404, blogIndex} from './Loc';
+import BlogReader from './blog/blogReader';
 
-const blog = (
-	<p className="ContentContainer">blog</p>
-);
+const blog = () => {
+	const index = blogIndex();
+	const blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
+	return (
+		<div className="ContentContainer">
+			{blogContent}
+		</div>
+	);
+}
+
+/*
+const blog = () => {
+	const index = blogIndex();
+	const blogContent = React.lazy(() => import('./blog/'+index.file));
+	return (
+		<div className="ContentContainer">
+			<suspense fallback={<div>wAiTinG FoR coNTeNt :P</div>}>
+				{blogContent}
+			</suspense>
+		</div>
+	);
+}
+*/
 
 const homepage = (
   <div className="ContentContainer">
     <h2>Welcome to <a href="https://lasershaft.com">Lasershaft.com!</a> where I put all my internet stuff.</h2>
     <br /><HiderI.HiderHeader headerText="About Me" idToHide="aboutMeHider" />
-    <span className="HiderNotHidden" id="aboutMeHider">
+    <div className="HiderNotHidden" id="aboutMeHider">
       <p>I'm Jess, I know some stuff about electronics and computers and the like.
         I have a degree in electrical engineering, I minored in computer science and mathematics.
         I'm seeking my CCNA as I work in IT and Database management. I'm seeking training in data science
@@ -29,11 +51,11 @@ const homepage = (
         charcoal drawing, calligraphy, ink/ pen drawings, <u title="I use GIMP">digital raster editing,</u> and
         sometimes I use crayons. And more, I have a love for music, tabletop roleplaying games, cooking, and baking.
       </p>
-    </span>
+    </div>
     <HiderI.HiderHeader headerText="Wow" idToHide="wowboxcontainer" />
-    <span className="HiderHidden" id="wowboxcontainer">
+    <div className="HiderHidden" id="wowboxcontainer">
     {wowbox}
-    </span>
+    </div>
   </div>
 );
 
@@ -41,7 +63,7 @@ const forofor = (
   <div className="ContentContainer">
     <header>404</header>
     <p>I don't know what you're looking for.</p>
-		<p><i>{wl.foflast}</i> doesn't seem to exist</p>
+		<p><i>{url404}</i> doesn't seem to exist</p>
     <a href="https://www.lasershaft.com/">Go home.</a>
   </div>
 );
@@ -49,7 +71,7 @@ const forofor = (
 const Content = () => {
   if (wl.i === "404") return forofor;
 	if (wl.i === "home") return homepage;
-	if (wl.i === "blog") return blog;
+	if (wl.i === "blog") return blog();
 };
 
 export default Content;

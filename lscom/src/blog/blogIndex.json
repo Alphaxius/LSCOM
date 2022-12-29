@@ -1,0 +1,28 @@
+[
+	{
+		"year": "0",
+		"name": "default",
+		"file": "blogTemplate"
+	},
+	{
+		"year": "2022",
+		"name": "default",
+		"file": "blogTemplate"
+	},
+	{
+		"year": "2022",
+		"name": "blogTemplate",
+		"file": "blogTemplate",
+		"tags": [
+			"template"
+		]
+	},
+	{
+		"year": "2022",
+		"name": "1118",
+		"file": "20221118",
+		"tags": [
+			"recipes"
+		]
+	}
+]

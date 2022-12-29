@@ -11,7 +11,7 @@ import wl from './Loc';
 /* consts */
 
 const lt = "<";
-const gt = ">";
+const gt = "/>";
 
 
 /* functions */

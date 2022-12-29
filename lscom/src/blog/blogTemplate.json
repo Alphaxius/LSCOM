@@ -1,0 +1,15 @@
+{
+	"title": "Blog Template",
+	"sections": [
+		{
+			"header": "Section 1",
+			"content": "<div><p>Section 1 content</p></div>",
+			"startshidden": true
+		},
+		{
+			"header": "Section 2",
+			"content": "<div><p>Section <strong>2</strong> content</p></div>",
+			"startshidden": false
+		}
+	]
+}
