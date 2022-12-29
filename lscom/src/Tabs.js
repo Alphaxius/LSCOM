@@ -73,6 +73,7 @@ const Tab = (tabName) => {
     <span>
       <label htmlFor={tabid}>{tn}</label>
       <input
+				title={tn}
         id={tabid}
         type="button"
         className="Tab"

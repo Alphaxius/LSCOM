@@ -38,6 +38,7 @@ class Hider {
     let idToShowH = this.hiderHeaderButtonId(headerText);
     return (
       <h3 className="HiderHeader"
+				title={headerText}
         onMouseEnter={() => {
           this.showElement({idPassed: idToShowE});
           this.showElement({idPassed: idToShowH});
@@ -48,6 +49,7 @@ class Hider {
         }}
       >
         <span
+					title="Toggle view this section"
           className="HiderHidden"
           id={idToShowE}
           onClick={() => this.toggleElement({idPassed: idToHide})}
@@ -56,6 +58,7 @@ class Hider {
         {"\t"}{headerText}{"\t"}
         <a
           href={window.location.href.split('#')[0]+'#'+headerText}
+					title="Link to this section"
           className="HiderHidden"
           id={idToShowH}
           style={{cursor: "pointer"}}

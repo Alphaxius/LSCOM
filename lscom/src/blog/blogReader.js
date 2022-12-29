@@ -2,7 +2,7 @@
 import HiderI from '../Hider';
 
 const TitleT = (value) => {
-	return ( <h2>{value.value}</h2> );
+	return ( <h2 title={value.value}>{value.value}</h2> );
 }
 
 /*
