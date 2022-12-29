@@ -19,7 +19,7 @@ const blog = () => {
 		blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
 	}
 	catch (error) {
-		blogContent = <div><h2>404</h2><p>{error.message}</p></div>;
+		blogContent = <div><h2>404</h2><p>ERROR: {error.message}</p></div>;
 	}
 	finally {
 		return (
