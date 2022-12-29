@@ -14,12 +14,20 @@ import BlogReader from './blog/blogReader';
 
 const blog = () => {
 	const index = blogIndex();
-	const blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
-	return (
-		<div className="ContentContainer">
-			{blogContent}
-		</div>
-	);
+	let blogContent = ""
+	try {
+		blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
+	}
+	catch (error) {
+		blogContent = <div><h2>404</h2><p>{error.message}</p></div>;
+	}
+	finally {
+		return (
+			<div className="ContentContainer">
+				{blogContent}
+			</div>
+		);
+	}
 }
 
 /*
