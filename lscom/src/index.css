@@ -191,13 +191,15 @@ label {
 }
 
 .Tab:hover,
-.TabHider:hover {
+.TabHider:hover,
+.HomeTab:hover {
   background-color: #AAAAFF;
   transition: background-color 0.2s;
 }
 
 .Tab:active,
-.TabHider:active {
+.TabHider:active,
+.HomeTab:active {
   background-color: #CCCCFF;
   color: #666666;
   transition: background-color 0.2s;
