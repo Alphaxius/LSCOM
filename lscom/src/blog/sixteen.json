@@ -1,0 +1,16 @@
+{
+	"title": "Sixteen",
+	"date": "20221230",
+	"sections": [
+		{
+			"header": "The Table",
+			"content": "<pre><code><b>      1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16</b>\n  <b>1</b>   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16\n  <b>2</b>   2   4   6   8  10  12  14  16  18  20  22  24  26  28  30  32\n  <b>3</b>   3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48\n  <b>4</br>   4   8  12  16  20  24  28  32  36  40  44  48  52  56  60  64\n  <b>5</b>   5  10  15  20  25  30  35  40  45  50  55  60  65  70  75  80\n  <b>6</b>   6  12  18  24  30  36  42  48  54  60  66  72  78  84  90  96\n  <b>7</b>   7  14  21  28  35  42  49  56  63  70  77  84  91  98 105 112\n  <b>8</b>   8  16  24  32  40  48  56  64  72  80  88  96 104 112 120 128\n  <b>9</b>   9  18  27  36  45  54  63  72  81  90  99 108 117 126 135 144\n <b>10</b>  10  20  30  40  50  60  70  80  90 100 110 120 130 140 150 160\n <b>11</b>  11  22  33  44  55  66  77  88  99 110 121 132 143 154 165 176\n <b>12</b>  12  24  36  48  60  72  84  96 108 120 132 144 156 168 180 192\n <b>13</b>  13  26  39  52  65  78  91 104 117 130 143 156 169 182 195 208\n <b>14</b>  14  28  42  56  70  84  98 112 126 140 154 168 182 196 210 226\n <b>15</b>  15  30  45  60  75  90 105 120 135 150 165 180 195 210 225 240\n <b>16</b>  16  32  48  64  80  96 112 128 144 160 176 192 208 224 240 256</code></pre>",
+			"startshidden": false
+		},
+		{
+			"header": "I am in love with composite numbers",
+			"content": "<p>I promise I won't only write about numbers. Just sometimes.</p><p>I wrote that table by hand, rather than writing a quick python script to make it for me. Not because I don't know how or I was too lazy to write the script (I think writing the script would have been easier) but because I enjoyed making that table. I thought multiplying those numbers in my head was fun for some reason.</p><p>Anyway, the reason I made that table at all was really because I felt I needed practice multiplying numbers this morning, while making my coffee. I use a ratio of 1:16 coffee weight to water weight in, and I ground 13 grams of beans. I needed to multiply 13 by 16. Okay, 100, 90, 18, 208. Great. Easy enough. <i>But what if</i>, I thought to myself, <i>what if I just knew what 13 by 16 was.</i> Maybe that would take the fun out of multiplying. (Something something suffer for different problems I'm reading <i>The Subtle Art of Not Giving a F*ck</i> by Mark Manson at the moment). So anyway. Now this table is on the internet.</p><p>While making this table I was reminded how much I enjoy the composition of numbers. Like, 144. One of my favorite numbers. Always get excited when I see it in the wild. Its factors are 2, 2, 2, 2, 3, 3. This makes for some fun things. It's 12^2, cool sure. But it's also 12=4^2+3^2=2^2+6^2=12^2+0^2 :: that's three sums of two unique non-negative numbers. Neat! (take a picture). A number that didn't make it onto this list that I thought about adding, but it made for formatting hell, is 51. This number always triggers the <i>THAT'S A PRIME NUMBER</i> response in my head, but it's actually 17*3.</p>",
+			"startshidden": false
+		}
+	]
+}

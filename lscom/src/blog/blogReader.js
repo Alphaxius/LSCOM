@@ -39,8 +39,14 @@ const interpretHtml = (content) => {
 				return <span key={keyMaker()}>{innerValues}</span>;
 			case "i":
 				return <i key={keyMaker()}>{innerValues}</i>;
+			case "b":
+				return <b key={keyMaker()}>{innerValues}</b>;
 			case "u":
 				return <u key={keyMaker()}>{innerValues}</u>;
+			case "code":
+				return <code key={keyMaker()}>{innerValues}</code>;
+			case "pre":
+				return <pre key={keyMaker()}>{innerValues}</pre>;
 			default:
 				return <div key={keyMaker()}>Unknown tag type</div>;
 		}
