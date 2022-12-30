@@ -1,0 +1,16 @@
+{
+	"title": "1118",
+	"date": "20221229",
+	"sections": [
+		{
+			"header": "The Blog",
+			"content": "<p>This is the first blog post. I had originally planned on starting this in December, but I hadn't gotten it to work very well until the end of December. On a long enough time scale, this is the same time. I'm not too worried about it. Ideally, I'll be posting a blog every other day or so. Something like 180 to 200 posts per year.</p><p>At this time I plan on posting any number of things only loosely related because I write them. I would like to post recipes, art that I make, thoughts and rants and whatever words I feel like I guess. Like, a public journal of miscellaneous things. Like a dumb twitter but it's only me!</p>",
+			"startshidden": false
+		},
+		{
+			"header": "Why is it called 1118?",
+			"content": "<p>I had sort of said it before, but I had originally written a post, different from this one, on november 18th. I like the number though, so I think I'll keep it.</p><p>In Wolfram Alpha, 1118 yields some neat facts. It's divisible by 2, 13, and 43. It can be written as 2^10+94. It's the unicode number (decimal) for a Cyrillic short u (y with a hat)</p><p>Actually, the number 94 is a bit fun. 96 is 64+32, so 94 is 64+32-2. That's 2^10+2^6+2^5-2^1. So, 1000110000-10=10001011110. This is actually seen in Wolfram Alpha, too. But, idk I think it's fun to do it. I thought of 96 because it's kind of useful for digital logic and for networking as a masking value. At least, it seems to have come up enough since I thought of it.</p><p>Wolfram Alpha also tells us that 1118 is a square free number. Square free numbers are numbers whose factors do not include duplicates. E.G., 20 is not square free since its factors are 4 and 5, thus 2^2 and 5 :: see that 2^2? SQUARE. Not a square free number.</p>",
+			"startshidden": false
+		}
+	]
+}

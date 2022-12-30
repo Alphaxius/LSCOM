@@ -4,7 +4,7 @@
 		{
 			"header": "Section 1",
 			"content": "<p>Section 1 content</p>",
-			"startshidden": true
+			"startshidden": false
 		},
 		{
 			"header": "Section 2",

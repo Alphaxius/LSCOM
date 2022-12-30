@@ -2,27 +2,26 @@
 	{
 		"year": "0",
 		"name": "default",
-		"file": "blogTemplate"
+		"file": "20221118",
+		"previousIndex": 10,
+		"nextIndex": 20
 	},
 	{
 		"year": "2022",
 		"name": "default",
-		"file": "blogTemplate"
-	},
-	{
-		"year": "2022",
-		"name": "blogTemplate",
-		"file": "blogTemplate",
-		"tags": [
-			"template"
-		]
+		"file": "20221118",
+		"previousIndex": 10,
+		"nextIndex": 20
 	},
 	{
 		"year": "2022",
 		"name": "1118",
 		"file": "20221118",
+		"index": 10,
+		"previousIndex": 10,
+		"nextIndex": 20,
 		"tags": [
-			"recipes"
+			"rant"
 		]
 	}
 ]

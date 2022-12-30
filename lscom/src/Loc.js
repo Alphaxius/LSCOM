@@ -1,5 +1,4 @@
 
-const blogIndices = require('./blog/blogIndex.json');
 
 let __o = window.location.origin;
 let __p = window.location.pathname.split('/').slice(1);
@@ -21,6 +20,7 @@ const to404 = () => {
 }
 
 const blogIndex = () => {
+	const blogIndices = require('./blog/blogIndex.json');
 	if (__p.length < 1) return false;
 	if (__p[0].toLowerCase() !== "blog") return false;
 	if (__p.length > 3) to404();
@@ -47,6 +47,7 @@ if (__p.length === 0) {
 		__i = "home";
 	}
 } else if (__p[0].toLowerCase() === "blog") {
+	document.title="Blog 1118";
 	__i = "blog";
 } else if (__p[0].toLowerCase() === "mail" ||
 					 __p[0].toLowerCase() === "email") {
