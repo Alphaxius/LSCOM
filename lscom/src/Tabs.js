@@ -118,6 +118,7 @@ const Nav = () => {
   
   let title = wl.i;
   title = title.charAt(0).toUpperCase() + title.slice(1);
+	if (title === "Blog") title = "Blog 1118";
 
   return (
     <span id="navContainer" className="NavContainerIn" >

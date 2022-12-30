@@ -111,6 +111,7 @@ const BlogReader = (blogContent) => {
 		<div>
 			<TitleT value={blogContent.blogContent.title} />
 			{sections}
+			<p style={{fontSize: "small"}} >DATED {blogContent.blogContent.date}</p>
 		</div>
 	);
 }
