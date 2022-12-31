@@ -1,10 +1,15 @@
 {
-  "short_name": "LASERSHAFT",
-  "name": "Laser Shaft Website Root",
+  "short_name": "Jess Barrett, Lasershaft.com, Blog 1118",
+  "name": "Lasershaft.com! A place for Jess Barrett's internet things. Art, rants, math, and other things.",
   "icons": [
+  	 {
+      "src": "./favicon.png",
+		"sizes": "16x16",
+		"type": "image/png"
+	 }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#333344",
+  "background_color": "lightgray"
 }
