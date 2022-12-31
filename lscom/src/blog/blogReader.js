@@ -47,22 +47,28 @@ const interpretHtml = (content) => {
 				return <code key={keyMaker()}>{innerValues}</code>;
 			case "pre":
 				return <pre key={keyMaker()}>{innerValues}</pre>;
+			case "image":
+				const splitInnerValues = innerValues[0].split('#');
+				const title = splitInnerValues[1];
+				const src = splitInnerValues[0];
+				return (
+					<iframe
+						key={keyMaker()}
+						title={title}
+						src={"https://drive.google.com/file/d/"+src+"/preview"}
+						width="800vw"
+						height="600vh"
+					>
+					</iframe>
+				);
 			default:
 				return <div key={keyMaker()}>Unknown tag type</div>;
 		}
 	}
-	let numberOfTimesLooping = 0;
 	let elements = []; //stack of reactHtmlElements
 	let primordialElements = [];
 	let contentSplit = content.split('<').slice(1);
-	console.log(content);
 	for (const splitBit of contentSplit) {
-		console.log(splitBit);
-		console.log(numberOfTimesLooping++);
-		console.log("primordialElements");
-		console.log(primordialElements);
-		console.log("elements");
-		console.log(elements);
 		const bitInProcess = splitBit.split('>');
 		let parsedBit = {type: "", content: []};
 		parsedBit.type = bitInProcess[0];

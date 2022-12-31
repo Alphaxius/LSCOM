@@ -2,24 +2,35 @@
 	{
 		"year": "0",
 		"name": "default",
-		"file": "sixteen",
-		"previousIndex": 10,
-		"nextIndex": 20
+		"file": "newyearsart",
+		"prev": "/2022/sixteen",
+		"next": ""
 	},
 	{
 		"year": "2022",
 		"name": "default",
-		"file": "sixteen",
-		"previousIndex": 10,
-		"nextIndex": 20
+		"file": "newyearsart",
+		"prev": "/2022/sixteen",
+		"next": ""
+	},
+	{
+		"year": "2022",
+		"name": "newyearsart",
+		"file": "newyearsart",
+		"index": 30,
+		"prev": "/2022/sixteen",
+		"next": "",
+		"tags": [
+			"art"
+		]
 	},
 	{
 		"year": "2022",
 		"name": "sixteen",
 		"file": "sixteen",
 		"index": 20,
-		"previousIndex": 10,
-		"nextIndex": 30,
+		"prev": "/2022/1118",
+		"next": "/2022/newyearsart",
 		"tags": [
 			"math",
 			"rant"
@@ -30,8 +41,8 @@
 		"name": "1118",
 		"file": "20221118",
 		"index": 10,
-		"previousIndex": 10,
-		"nextIndex": 20,
+		"prev": "/2022/1118",
+		"next": "/2022/sixteen",
 		"tags": [
 			"rant",
 			"math"

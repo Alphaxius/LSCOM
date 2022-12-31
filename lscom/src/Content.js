@@ -19,30 +19,20 @@ const blog = () => {
 		blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
 	}
 	catch (error) {
-		blogContent = <div><h2>404</h2><p>ERROR: {error.message}</p></div>;
+		return forofor();
 	}
 	finally {
 		return (
 			<div className="ContentContainer">
 				{blogContent}
+				<div className="pnBlogLinksContainer">
+					<a className="previousBlogLink" href={wl.o+"/blog"+index.prev}>Previous</a>
+					<a className="nextBlogLink"href={wl.o+"/blog"+index.next}>Next</a>
+				</div>
 			</div>
 		);
 	}
 }
-
-/*
-const blog = () => {
-	const index = blogIndex();
-	const blogContent = React.lazy(() => import('./blog/'+index.file));
-	return (
-		<div className="ContentContainer">
-			<suspense fallback={<div>wAiTinG FoR coNTeNt :P</div>}>
-				{blogContent}
-			</suspense>
-		</div>
-	);
-}
-*/
 
 const homepage = (
   <div className="ContentContainer">

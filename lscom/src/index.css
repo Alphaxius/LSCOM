@@ -33,8 +33,8 @@ label {
 
 
 .FooterContainer {
-  padding: 2vw;
-	margin-bottom: 2vw;
+  padding: 4vw;
+	margin-bottom: 8vw;
 }
 
 #footer_copyright {
@@ -212,6 +212,29 @@ label {
 .ContentContainer {
   padding-left: 2vw;
   padding-right: 2vw;
+}
+
+/* BLOG LINKS */
+
+.pnBlogLinksContainer {
+	width: 50vw;
+	position: relative;
+	left: 25%;
+}
+
+.previousBlogLink,
+.nextBlogLink {
+	background: darkgray;
+	margin: 4ex;
+	padding: 2ex;
+}
+
+.previousBlogLink {
+	float: left;
+}
+
+.nextBlogLink {
+	float: right;
 }
 
 /* HIDER HEADER */

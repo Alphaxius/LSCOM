@@ -15,12 +15,13 @@ window.location.search.slice(1).split('&').forEach((q) => {
 let __h = window.location.hash;
 let __i;
 
+const blogIndices = require('./blog/blogIndex.json');
+
 const to404 = () => {
 	window.location.href = __o + "/404" + window.location.pathname + window.location.search + __h;
 }
 
 const blogIndex = () => {
-	const blogIndices = require('./blog/blogIndex.json');
 	if (__p.length < 1) return false;
 	if (__p[0].toLowerCase() !== "blog") return false;
 	if (__p.length > 3) to404();
