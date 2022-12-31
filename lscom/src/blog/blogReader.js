@@ -28,6 +28,7 @@ const interpretHtml = (content) => {
 			if (innerValues[dex] === 0) innerValues.splice(dex, 1);
 			else dex++;
 		}
+		const splitInnerValues = innerValues[0].split('#');
 		switch (type) {
 			case "div":
 				return <div key={keyMaker()}>{innerValues}</div>;
@@ -47,16 +48,15 @@ const interpretHtml = (content) => {
 				return <code key={keyMaker()}>{innerValues}</code>;
 			case "pre":
 				return <pre key={keyMaker()}>{innerValues}</pre>;
+			case "hovertext":
+				return <u title={splitInnerValues[1]} key={keyMaker()}>{splitInnerValues[0]}</u>;
 			case "image":
-				const splitInnerValues = innerValues[0].split('#');
-				const title = splitInnerValues[1];
-				const src = splitInnerValues[0];
 				return (
 					<iframe
 						key={keyMaker()}
-						title={title}
-						src={"https://drive.google.com/file/d/"+src+"/preview"}
-						width="800vw"
+						title={splitInnerValues[1]}
+						src={"https://drive.google.com/file/d/"+splitInnerValues[0]+"/preview"}
+						width="100%"
 						height="600vh"
 					>
 					</iframe>
