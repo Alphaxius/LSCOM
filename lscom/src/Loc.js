@@ -1,7 +1,7 @@
 
 
 let __o = window.location.origin;
-let __p = window.location.pathname.split('/').slice(1);
+let __p = decodeURIComponent(window.location.pathname).split('/').slice(1);
 if (__p.length > 0 && __p[__p.length - 1] === "") __p.pop();
 let __q = {};
 window.location.search.slice(1).split('&').forEach((q) => {
@@ -27,8 +27,8 @@ const blogIndex = () => {
 	if (__p.length > 3) to404();
 	let year = "0";
 	let name = "default";
-	if (__p.length > 1) year = __p[1].toLowerCase();
-	if (__p.length > 2) name = __p[2].toLowerCase();
+	if (__p.length > 1) year = __p[1];
+	if (__p.length > 2) name = __p[2];
 	for (const index of blogIndices) {
 		if (year !== index.year) continue;
 		if (name === index.name) return index;
@@ -81,11 +81,9 @@ if (__p.length === 0) {
 		window.location.href = "https://cal.lasershaft.com";
 	}
 } else if (__p[0].toLowerCase() === "site") {
-	window.location.href = "https://site.lasershaft.com/" + window.location.pathname.split('/',1)[1] + 
-		window.location.search + window.location.hash;
+	window.location.href = "https://site.lasershaft.com/";
 } else if (__p[0].toLowerCase() === "github") {
-	window.location.href = "https://www.github.com/" + window.location.pathname.split('/',1)[1] + 
-		window.location.search + window.location.hash;
+	window.location.href = "https://www.github.com/Alphaxius";
 } else if (__p[0].toLowerCase() === "linkedin") {
 	if (__p.length > 1) {// && !(__p.length === 2 && __p[1] === "")) {
 		to404(); 

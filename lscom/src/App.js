@@ -16,7 +16,7 @@ class App extends Component {
         <div id="contentSpacer" />
         <Content />
         <footer className="FooterContainer">
-					<div id="footer_copyright">Copyright Jesella Laser Beam, Lasershaft.com, Blog 1118 :: 2022</div>
+					<div id="footer_copyright">Copyright Jesella Laser Beam, Lasershaft.com, Blog 1118 :: 2022{"\u2013"}2023</div>
 					<div title="Email jess@lasershaft.com"  id="footer_emailme"><a href="mailto:jess@lasershaft.com">Email Me</a></div>
 				</footer>
       </div>

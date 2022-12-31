@@ -28,7 +28,10 @@ const interpretHtml = (content) => {
 			if (innerValues[dex] === 0) innerValues.splice(dex, 1);
 			else dex++;
 		}
-		const splitInnerValues = innerValues[0].split('#');
+		let splitInnerValues = ["",""];
+		if (innerValues.length > 0 && typeof(innerValues[0])==="string") {
+			splitInnerValues = innerValues[0].split('#');
+		}
 		switch (type) {
 			case "div":
 				return <div key={keyMaker()}>{innerValues}</div>;
