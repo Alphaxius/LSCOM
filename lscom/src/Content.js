@@ -11,6 +11,7 @@ import wowbox from './sillythings/wow-box';
 import HiderI from './Hider';
 import wl, {url404, blogIndex} from './Loc';
 import BlogReader from './blog/blogReader';
+import Utitle from './Utitle';
 
 const blog = () => {
 	const index = blogIndex();
@@ -45,8 +46,8 @@ const homepage = (
         (maybeee considering graduate programs).</p>
       <p>I like to talk about my hobbies and this is my website so you cannot stop me muahaha.
         I have a <s>secret</s> side interest in multimedia art and graphics. I am self taught
-        in <u title="except two classes (one in high school and one in college"> photography,</u> watercolors, 
-        charcoal drawing, calligraphy, ink/ pen drawings, <u title="I use GIMP">digital raster editing,</u> and
+        in <Utitle text=" photography," title="except two classes (one in high school and one in college" /> watercolors, 
+        charcoal drawing, calligraphy, ink/ pen drawings, <Utitle text="digital raster editing," title="I use GIMP" /> and
         sometimes I use crayons. And more, I have a love for music, tabletop roleplaying games, cooking, and baking.
       </p>
     </div>

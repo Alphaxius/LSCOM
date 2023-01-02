@@ -248,7 +248,24 @@ a.HiderNotHidden {
   color: inherit;
 }
 
+.UtitleContainer .UtitleText {
+	text-decoration: underline;
+}
 
+.UtitleContainer .UtitleTitle {
+	display: none;
+}
+
+.UtitleContainer .UtitleText
+.UtitleContainer .UtitleTitle {
+	color: inherit;
+}
+
+.UtitleContainer:hover .UtitleTitle {
+	display: inline;
+	font-style: italic;
+	background-color: white;
+}
 
 
 

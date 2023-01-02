@@ -1,5 +1,6 @@
 
 import HiderI from '../Hider';
+import Utitle from '../Utitle';
 
 const TitleT = (value) => {
 	return ( <h2 title={value.value}>{value.value}</h2> );
@@ -52,7 +53,7 @@ const interpretHtml = (content) => {
 			case "pre":
 				return <pre key={keyMaker()}>{innerValues}</pre>;
 			case "hovertext":
-				return <u title={splitInnerValues[1]} key={keyMaker()}>{splitInnerValues[0]}</u>;
+				return <Utitle text={splitInnerValues[0]} title={splitInnerValues[1]} key={keyMaker()} />;
 			case "image":
 				return (
 					<iframe
