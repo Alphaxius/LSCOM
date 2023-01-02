@@ -68,7 +68,7 @@ const forofor = (
 );
 
 const Content = () => {
-  if (wl.i === "404") return forofor;
+	if (wl.i === "404") return forofor;
 	if (wl.i === "home") return homepage;
 	if (wl.i === "blog") return blog();
 };

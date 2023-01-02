@@ -7,8 +7,12 @@ class Hider {
   
   hhbidcount = 0;
   
+  hiderHeaderId = function(headerText) {
+  		return "hhbid-id-" + headerText.split(" ").join("-")
+  };
+  
   hiderHeaderButtonId = function(headerText) {
-    return "hhbid-id-" + headerText.split(" ").join("-") + (this.hhbidcount++);
+     return this.hiderHeaderId(headerText) + (this.hhbidcount++);
   };
 
   toggleElement = function(idPassed) {
@@ -33,12 +37,13 @@ class Hider {
 
   HiderHeader = (hiderHeader) => {
     let headerText = hiderHeader.headerText;
+	 let headerId = this.hiderHeaderId(headerText);
     let idToHide = hiderHeader.idToHide;
     let idToShowE = this.hiderHeaderButtonId(headerText);
     let idToShowH = this.hiderHeaderButtonId(headerText);
     return (
       <h3 className="HiderHeader"
-				title={headerText}
+		  title={headerText}
         onMouseEnter={() => {
           this.showElement({idPassed: idToShowE});
           this.showElement({idPassed: idToShowH});
@@ -47,9 +52,10 @@ class Hider {
           this.hideElement({idPassed: idToShowE})
           this.hideElement({idPassed: idToShowH})
         }}
+		  id={headerId}
       >
         <span
-					title="Toggle view this section"
+			 title="Toggle view this section"
           className="HiderHidden"
           id={idToShowE}
           onClick={() => this.toggleElement({idPassed: idToHide})}
@@ -57,8 +63,8 @@ class Hider {
         >...</span>
         {"\t"}{headerText}{"\t"}
         <a
-          href={window.location.href.split('#')[0]+'#'+headerText}
-					title="Link to this section"
+          href={window.location.href.split('#')[0]+'#'+headerId}
+			 title="Link to this section"
           className="HiderHidden"
           id={idToShowH}
           style={{cursor: "pointer"}}
