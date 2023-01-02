@@ -135,9 +135,9 @@ label {
   border-width: 0px;
   
   height: inherit;
-  	font-family: 'Roboto Slab', serif;
-	font-weight: 900;
-	font-size: 100%;
+  font-family: 'roboto', sans-serif;
+  font-weight: bold;
+  font-size: inherit;
   text-align: center;
   vertical-align: top;
   line-height: 1ex;
