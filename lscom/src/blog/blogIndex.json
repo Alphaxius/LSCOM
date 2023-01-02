@@ -2,15 +2,15 @@
 	{
 		"year": "0",
 		"name": "default",
-		"file": "car",
-		"prev": "/2022/New Years Art",
-		"next": ""
+		"file": "20230102",
+		"prev": "/2023/I don't have a car",
+		"next": "/2023"
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"file": "car",
-		"prev": "/2022/New Years Art",
+		"file": "20230102",
+		"prev": "/2023/I don't have a car",
 		"next": "/2023"
 	},
 	{
@@ -22,11 +22,22 @@
 	},
 	{
 		"year": "2023",
+		"name": "Stickers",
+		"file": "20230102",
+		"index": 50,
+		"prev": "/2023/I don't have a car",
+		"next": "/2023",
+		"tags": [
+			"rant"
+		]
+	},
+	{
+		"year": "2023",
 		"name": "I don't have a car",
 		"file": "car",
 		"index": 40,
 		"prev": "/2022/New Years Art",
-		"next": "/2023",
+		"next": "/2023/Stickers",
 		"tags": [
 			"rant"
 		]
