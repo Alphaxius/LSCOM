@@ -1,6 +1,6 @@
 {
 	"title": "Sixteen",
-	"date": "20221230",
+	"date": "20221230, updated 20230103",
 	"sections": [
 		{
 			"header": "The Table",
@@ -9,8 +9,13 @@
 		},
 		{
 			"header": "I am in love with composite numbers",
-			"content": "<p>I promise I won't only write about numbers. Just sometimes.</p><p>I wrote that table by hand, rather than writing a quick python script to make it for me. Not because I don't know how or I was too lazy to write the script (I think writing the script would have been easier) but because I enjoyed making that table. I thought multiplying those numbers in my head was fun for some reason.</p><p>Anyway, the reason I made that table at all was really because I felt I needed practice multiplying numbers this morning, while making my coffee. I use a ratio of 1:16 coffee weight to water weight in, and I ground 13 grams of beans. I needed to multiply 13 by 16. Okay, 100, 90, 18, 208. Great. Easy enough. <i>But what if</i>, I thought to myself, <i>what if I just knew what 13 by 16 was.</i> Maybe that would take the fun out of multiplying. (Something something suffer for different problems I'm reading <i>The Subtle Art of Not Giving a F*ck</i> by Mark Manson at the moment). So anyway. Now this table is on the internet.</p><p>While making this table I was reminded how much I enjoy the composition of numbers. Like, 144. One of my favorite numbers. Always get excited when I see it in the wild. Its factors are 2, 2, 2, 2, 3, 3. This makes for some fun things. It's 12^2, cool sure. But it's also 12=4^2+3^2=2^2+6^2=12^2+0^2 :: that's three sums of two unique non-negative numbers. Neat! (take a picture). A number that didn't make it onto this list that I thought about adding, but it made for formatting hell, is 51. This number always triggers the <i>THAT'S A PRIME NUMBER</i> response in my head, but it's actually 17*3.</p>",
+			"content": "<p>I promise I won't only write about numbers. Just sometimes.</p><p>I wrote that table by hand, rather than writing a quick python script to make it for me. Not because I don't know how or I was too lazy to write the script (I think writing the script would have been easier) but because I enjoyed making that table. I thought multiplying those numbers in my head was fun for some reason.</p><p>Anyway, the reason I made that table at all was really because I felt I needed practice multiplying numbers this morning, while making my coffee. I use a ratio of 1:16 coffee weight to water weight in, and I ground 13 grams of beans. I needed to multiply 13 by 16. Okay, 100, 90, 18, 208. Great. Easy enough. <i>But what if</i>, I thought to myself, <i>what if I just knew what 13 by 16 was.</i> Maybe that would take the fun out of multiplying. (Something something suffer for different problems I'm reading <i>The Subtle Art of Not Giving a F*ck</i> by Mark Manson at the moment). So anyway. Now this table is on the internet.</p><p>While making this table I was reminded how much I enjoy the composition of numbers. Like, 144. One of my favorite numbers. Always get excited when I see it in the wild. Its factors are 2, 2, 2, 2, 3, 3. This makes for some fun things. 144=12^2*<hovertext>1^2#trivial</hovertext>, 144=2^2*6^2, 144=4^2*3^2. It's combinatorics and composit numbers all together, fantastic. Another fun, but larger one is 900. There's a vSauce video about these somewhere? Anti-primes I think. Like 5040, another good one. Someone on Wikipedia wrote this about it: '5040 is a factorial (7!), a superior highly composite number, abundant number, colossally abundant number and the number of permutations of 4 items out of 10 choices (10 × 9 × 8 × 7 = 5040). It is also one less than a square, making (7, 71) a Brown number pair.'</p>",
 			"startshidden": false
+		},
+		{
+			"header": "e: I made a mistake",
+			"content": "<p>I originally said that <i>12=4^2+3^2=2^2+6^2=12^2+0^2</i> which is plainly wrong.</p>",
+			"startshidden": true
 		}
 	]
 }

@@ -128,6 +128,7 @@ const BlogReader = (blogContent) => {
 			<TitleT value={blogContent.blogContent.title} />
 			{sections}
 			<p style={{fontSize: "small"}} >DATED {blogContent.blogContent.date}</p>
+			<a href={window.location.origin+"/blog"+blogContent.blogContent.year+"/"+blogContent.blogContent.name}>permalink</a>
 		</div>
 	);
 }
