@@ -16,9 +16,9 @@ def read_text_file(filename):
 				title = line.strip()
 			elif linedex == 1:
 				year = line.strip()
-			elif linedex == 3:
+			elif linedex == 2:
 				date = line.strip()
-			elif linedex == 4:
+			elif linedex == 3:
 				tags = line.strip().split()
 			elif line.strip() == "":
 				state = 1
@@ -68,7 +68,7 @@ def convert_to_json(filename):
 		"tags": tags
 	}
 	with open("testindexfile.json", 'w') as indexfile:
-		json.dump({"year": year,})
+		json.dump({"year": year})
 	
 	
 	

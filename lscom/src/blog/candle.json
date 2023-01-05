@@ -1,0 +1,56 @@
+{
+  "title": "An Inventory of my Candles",
+  "date": "20230104",
+  "sections": [
+    {
+      "header": "Yankee 'Leaves'",
+      "content": "<p>I keep this one on my bedstand. It's easily one of the prettiest candles I have, yellow and tall. It has one wick, it smells really sweet, and it has this bulbous glass lid. It sits next to a rainbow horse skeleton and balances the vibe.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Bath and Body Works 'Leaves'",
+      "content": "<p>The rest of these are in my bathroom. I like to turn one on when I shower.</p><p>This one smells like those pine cones that you get during wintertime, but a little warmer? It has a really nice orange color. I like this one occasionally but it's fairly strong even though it is one of my smaller candles.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Vitality Scents Soy Candles 'Winter Wonderland'",
+      "content": "<p>This one is really <i>subtle</i>. Which makes me feel goofy saying, cause I don't see myself as a <i>candle person tm</i> but I don't know, it's still strong, but the scent is mild? You get what I mean? It smells like winter, and a little minty.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Bathbodyworks 'Peppermint Hot Chocolate'",
+      "content": "<p>I love this one. It smells like peppermint hot chocolate. I burned half of it in one day and now I am saving it for later. If I were to ever want to be paid in a single <hovertext>commodity#apart from food</hovertext> it would be this candle. I want three more.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Babodyworks 'Frozen Lake'",
+      "content": "<p>They had a sale for buy one get one 50% off. I'm dissapointed I didn't get two of peppermint hot chocolate. This one isn't bad but it's no peppermint hot chocolate.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Anko Fig something or other",
+      "content": "<p>I can't buy this anywhere anymore and the label is gone, and I've burned it too much so I can't burn it anymore. I do really like this one though and I'm still looking for a replacement. I keep it because it has such a nice green color and it reminds me that I liked it.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Wicksium Candle Co 'Entanglement'",
+      "content": "<p>I met the person that made these candles! I bought one after meeting them, and this one was one of my favorite ones based off the description. It's super cute and has little crystals in it. I don't know how to describe how it smells. It smells like, glitter-water? Wild and wacky. It came with a bunch of goodies. Go get local candles.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Babadorks 'Sweater Weather'",
+      "content": "<p>I bought another one. It smells good though, like late fall trees and a fireplace. Fantastic.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Isadorra 'Cardamom Latte'",
+      "content": "<p>THIS ONE HAS ACTUAL CARDAMOM IN IT. Another local candle maker. These are the best I really need to buy local more. Super good smell, cute lil jar it comes in, nice lil label, love it. Go get um.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Does a first rain of the season candle exist?",
+      "content": "<p>If it does I want one. That's my favorite smell. Apart from peppermint hot chocolate I guess.</p>",
+      "startshidden": false
+    }
+  ]
+}

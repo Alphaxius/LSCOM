@@ -2,23 +2,27 @@
 	{
 		"year": "0",
 		"name": "default",
-		"file": "20230102",
-		"prev": "/2023/I don't have a car",
+		"file": "candle",
+		"prev": "/2023/Stickers",
 		"next": "/2023"
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"file": "20230102",
-		"prev": "/2023/I don't have a car",
+		"file": "candle",
+		"prev": "/2023/Stickers",
 		"next": "/2023"
 	},
 	{
-		"year": "2022",
-		"name": "default",
-		"file": "newyearsart",
-		"prev": "/2022/sixteen",
-		"next": "/2023/I don't have a car"
+		"year": "2023",
+		"name": "Candles",
+		"file": "candle",
+		"index": 60,
+		"prev": "/2023/Stickers",
+		"next": "/2023/",
+		"tags": [
+			"rant"
+		]
 	},
 	{
 		"year": "2023",
@@ -26,7 +30,7 @@
 		"file": "20230102",
 		"index": 50,
 		"prev": "/2023/I don't have a car",
-		"next": "/2023",
+		"next": "/2023/Candles",
 		"tags": [
 			"rant"
 		]
@@ -76,5 +80,12 @@
 			"rant",
 			"math"
 		]
+	},
+	{
+		"year": "2022",
+		"name": "default",
+		"file": "newyearsart",
+		"prev": "/2022/sixteen",
+		"next": "/2023/I don't have a car"
 	}
 ]
