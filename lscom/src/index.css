@@ -202,8 +202,8 @@ a:link:hover {
   height: 4ex;
   width: 8em;
   
-  margin-left: 2.5vmin;
-  margin-right: 2.5vmin;
+  --margin-left: 2.5vw;
+  --margin-right: 2.5vw;
   margin-bottom: 3px;
   
   padding-left: clamp(4pt, 1vw, 12pt);
@@ -264,18 +264,6 @@ a:link:hover {
 	position: static;
   border-radius: 4pt;
   border-width: 0px;
-}
-/*
-.perma.BlogLink {
-	float: none;
-}
-
-.previous.BlogLink {
-	float: left;
-}
-
-.next.BlogLink {
-	float: right;
 }
 
 /* HIDER HEADER */

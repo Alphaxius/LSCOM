@@ -106,13 +106,18 @@ const SectionT = (stuff) => {
 	let isHidden = false;
 	if (stuff.stuff.startshidden) isHidden = true;
 	let hiddenClassName = "HiderNotHidden";
-	if (isHidden) hiddenClassName = "HiderHidden";
+	let otherClassName = "HiderHidden";
+	if (isHidden) {
+		hiddenClassName = "HiderHidden";
+		otherClassName = "HiderNotHidden";
+	}
 	return (
 		<div>
 			<HiderI.HiderHeader headerText={stuff.stuff.header} idToHide={id} />
 			<div className={hiddenClassName} id={id}>
 				{interpretHtml(stuff.stuff.content)}
 			</div>
+			<p className={otherClassName} id={id+"elipsis"}>...</p>
 		</div>
 	);
 }

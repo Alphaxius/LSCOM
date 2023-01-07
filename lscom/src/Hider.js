@@ -17,11 +17,15 @@ class Hider {
 
   toggleElement = function(idPassed) {
     let id = idPassed.idPassed;
-    let currClass = document.getElementById(id).getAttribute("class");
+	 let contentElement = document.getElementById(id);
+	 let secretElipsis = document.getElementById(id+"elipsis");
+    let currClass = contentElement.getAttribute("class");
     if (currClass === "HiderNotHidden") {
-      document.getElementById(id).setAttribute("class", "HiderHidden");
+      contentElement.setAttribute("class", "HiderHidden");
+		secretElipsis.setAttribute("class", "HiderNotHidden");
     } else {
-      document.getElementById(id).setAttribute("class", "HiderNotHidden");
+      contentElement.setAttribute("class", "HiderNotHidden");
+		secretElipsis.setAttribute("class", "HiderHidden");
     };
   };
 
@@ -40,36 +44,38 @@ class Hider {
 	 let headerId = this.hiderHeaderId(headerText);
     let idToHide = hiderHeader.idToHide;
     let idToShowE = this.hiderHeaderButtonId(headerText);
-    let idToShowH = this.hiderHeaderButtonId(headerText);
+    let idToShowH = this.hiderHeaderButtonId(headerText); 
     return (
-      <h3 className="HiderHeader"
-		  title={headerText}
-        onMouseEnter={() => {
-          this.showElement({idPassed: idToShowE});
-          this.showElement({idPassed: idToShowH});
-        }}
-        onMouseLeave={() => {
-          this.hideElement({idPassed: idToShowE})
-          this.hideElement({idPassed: idToShowH})
-        }}
-		  id={headerId}
-      >
-        <span
-			 title="Toggle view this section"
-          className="HiderHidden"
-          id={idToShowE}
-          onClick={() => this.toggleElement({idPassed: idToHide})}
-          style={{cursor: "pointer"}}
-        >...</span>
-        {"\t"}{headerText}{"\t"}
-        <a
-          href={window.location.href.split('#')[0]+'#'+headerId}
-			 title="Link to this section"
-          className="HiderHidden"
-          id={idToShowH}
-          style={{cursor: "pointer"}}
-        >{"#"}</a>
-      </h3>
+	 	<div>
+			<h3 className="HiderHeader"
+			  title={headerText}
+			  onMouseEnter={() => {
+				 this.showElement({idPassed: idToShowE});
+				 this.showElement({idPassed: idToShowH});
+			  }}
+			  onMouseLeave={() => {
+				 this.hideElement({idPassed: idToShowE})
+				 this.hideElement({idPassed: idToShowH})
+			  }}
+			  id={headerId}
+			>
+			  <span
+				 title="Toggle view this section"
+				 className="HiderHidden"
+				 id={idToShowE}
+				 onClick={() => this.toggleElement({idPassed: idToHide})}
+				 style={{cursor: "pointer"}}
+			  >...</span>
+			  {"\t"}{headerText}{"\t"}
+			  <a
+				 href={window.location.href.split('#')[0]+'#'+headerId}
+				 title="Link to this section"
+				 className="HiderHidden"
+				 id={idToShowH}
+				 style={{cursor: "pointer"}}
+			  >{"#"}</a>
+			</h3>
+		</div>
     );
   };
 };

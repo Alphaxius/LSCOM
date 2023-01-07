@@ -15,6 +15,7 @@ import Utitle from './Utitle';
 
 const blog = () => {
 	const index = blogIndex();
+	if (!index) return forofor;
 	let blogContent = ""
 	try {
 		blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
@@ -27,9 +28,9 @@ const blog = () => {
 			<div className="ContentContainer">
 				{blogContent}
 				<div className="pnBlogLinksContainer">
-					<a className="previous BlogLink" href={wl.o+"/blog"+index.prev}>Previous</a>
-					<a className="perma BlogLink" href={wl.o+"/blog/"+index.year+"/"+index.file}>Permalink</a>
-					<a className="next BlogLink" href={wl.o+"/blog"+index.next}>Next</a>
+					<a className="previous BlogLink" href={wl.o+"/Blog"+index.prev}>Previous</a>
+					<a className="perma BlogLink" href={wl.o+"/Blog/"+index.year+"/"+index.name}>Permalink</a>
+					<a className="next BlogLink" href={wl.o+"/Blog"+index.next}>Next</a>
 				</div>
 			</div>
 		);
@@ -52,10 +53,12 @@ const homepage = (
         sometimes I use crayons. And more, I have a love for music, tabletop roleplaying games, cooking, and baking.
       </p>
     </div>
+	 <p className="HiderHidden" id="aboutMeHiderelipsis">...</p>
     <HiderI.HiderHeader headerText="Wow" idToHide="wowboxcontainer" />
     <div className="HiderHidden" id="wowboxcontainer">
     {wowbox}
     </div>
+	 <p className="HiderNotHidden" id="wowboxcontainerelipsis">...</p>
   </div>
 );
 

@@ -34,11 +34,12 @@ const blogIndex = () => {
 		if (year !== qIndex1.year) continue;
 		if (name === qIndex1.name) {index = qIndex1; break; }
 	}
+	if (!index) to404()
 	if (!index.gotoindex) return index;
 	for (const qIndex2 of blogIndices) {
 		if (index.gotoindex === qIndex2.index) return qIndex2;
 	}
-	return false;
+	to404();
 }
 
 if (__p.length === 0) {
