@@ -30,6 +30,22 @@ label {
   font-size: 0;
 }
 
+a:link {
+	color: cyan;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:visited:hover {
+	color: white; 
+}
+
+a:link:hover {
+	color: pink;
+}
+
 
 
 
@@ -236,24 +252,29 @@ label {
 
 /* BLOG LINKS */
 
-.pnBlogLinksContainer {
-	width: 50vw;
-	position: relative;
-	left: 25%;
-}
-
-.previousBlogLink,
-.nextBlogLink {
+.BlogLink {
 	background: darkgray;
-	margin: 4ex;
-	padding: 2ex;
+	margin-top: 2ex;
+	margin-bottom: 2ex;
+	margin-right: 2ex;
+	margin-left: 2ex;
+	display: inline-block;
+	width: 9ex;
+	padding: 1ex;
+	position: static;
+  border-radius: 4pt;
+  border-width: 0px;
+}
+/*
+.perma.BlogLink {
+	float: none;
 }
 
-.previousBlogLink {
+.previous.BlogLink {
 	float: left;
 }
 
-.nextBlogLink {
+.next.BlogLink {
 	float: right;
 }
 

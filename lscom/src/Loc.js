@@ -29,9 +29,14 @@ const blogIndex = () => {
 	let name = "default";
 	if (__p.length > 1) year = __p[1];
 	if (__p.length > 2) name = __p[2];
-	for (const index of blogIndices) {
-		if (year !== index.year) continue;
-		if (name === index.name) return index;
+	let index;
+	for (const qIndex1 of blogIndices) {
+		if (year !== qIndex1.year) continue;
+		if (name === qIndex1.name) {index = qIndex1; break; }
+	}
+	if (!index.gotoindex) return index;
+	for (const qIndex2 of blogIndices) {
+		if (index.gotoindex === qIndex2.index) return qIndex2;
 	}
 	return false;
 }

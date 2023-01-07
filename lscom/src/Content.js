@@ -27,8 +27,9 @@ const blog = () => {
 			<div className="ContentContainer">
 				{blogContent}
 				<div className="pnBlogLinksContainer">
-					<a className="previousBlogLink" href={wl.o+"/blog"+index.prev}>Previous</a>
-					<a className="nextBlogLink"href={wl.o+"/blog"+index.next}>Next</a>
+					<a className="previous BlogLink" href={wl.o+"/blog"+index.prev}>Previous</a>
+					<a className="perma BlogLink" href={wl.o+"/blog/"+index.year+"/"+index.file}>Permalink</a>
+					<a className="next BlogLink" href={wl.o+"/blog"+index.next}>Next</a>
 				</div>
 			</div>
 		);

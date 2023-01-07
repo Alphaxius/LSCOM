@@ -2,16 +2,12 @@
 	{
 		"year": "0",
 		"name": "default",
-		"file": "candle",
-		"prev": "/2023/Stickers",
-		"next": "/2023"
+		"gotoindex": 60
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"file": "candle",
-		"prev": "/2023/Stickers",
-		"next": "/2023"
+		"gotoindex": 60
 	},
 	{
 		"year": "2023",
@@ -84,8 +80,6 @@
 	{
 		"year": "2022",
 		"name": "default",
-		"file": "newyearsart",
-		"prev": "/2022/sixteen",
-		"next": "/2023/I don't have a car"
+		"gotoindex": 30
 	}
 ]

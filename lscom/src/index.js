@@ -10,4 +10,4 @@ root.render(
     <App />
   </React.StrictMode>
 );
-document.getElementById(wl.h).scrollIntoView(false);
+if (wl.h) document.getElementById(wl.h).scrollIntoView(false);
