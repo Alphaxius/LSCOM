@@ -1,0 +1,21 @@
+{
+  "title": "some mixed media stuff",
+  "date": "20230107",
+  "sections": [
+    {
+	    "header": "Wow a picture",
+			"content": "<image>1pnqwRBDZRJETCN1TFf1kQ7cos38UTomy#A mixed media painting study of movement</image>",
+			"startshidden": false
+		},
+		{
+			"header": "What?",
+			"content": "<p>This is the first physical media I've made in a few weeksish. It's on strathmoor vision watercolor paper, sumi ink, Sakura Koi Watercolors (I love this set), crayola crans, and some more sumi brush work on top to excentuate the movement. Then, some curve editing to make the colors POP.</p><p>I wanted this to be a vague gesture drawing, sort of representing a pose. But also, I am a fan of that left-side/right-side color clash thing right now. Maybe that says something about me, some inner conflict or something. Guess it's time for some introspection.</p><p>Is this wall worthy?</p>",
+			"startshidden": false
+		},
+		{
+			"header": "sARTurday",
+			"content": "<p>I'm calling it sARTurday in the hopes that I make it a regular thing to post some art on saturdays. Let's see if I do itttt.</p>",
+			"startshidden": true
+		}
+	]
+}
