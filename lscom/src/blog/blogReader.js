@@ -61,7 +61,7 @@ const interpretHtml = (content) => {
 						title={splitInnerValues[1]}
 						src={"https://drive.google.com/file/d/"+splitInnerValues[0]+"/preview"}
 						width="90%"
-						height="800vmin"
+						height="600vh"
 					>
 					</iframe>
 				);

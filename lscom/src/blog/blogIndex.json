@@ -2,12 +2,23 @@
 	{
 		"year": "0",
 		"name": "default",
-		"gotoindex": 70
+		"gotoindex": 80
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"gotoindex": 70
+		"gotoindex": 80
+	},
+	{
+		"year": "2023",
+		"name": "hotdrinks",
+		"file": "hotdrinks",
+		"index": 80,
+		"prev": "/2023/sARTurday 1",
+		"next": "/2023/",
+		"tags": [
+			"rant"
+		]
 	},
 	{
 		"year": "2023",
@@ -15,7 +26,7 @@
 		"file": "jan7art",
 		"index": 70,
 		"prev": "/2023/Candles",
-		"next": "/2023/",
+		"next": "/2023/hotdrinks",
 		"tags": [
 			"art"
 		]
