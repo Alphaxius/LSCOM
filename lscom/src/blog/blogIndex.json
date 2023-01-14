@@ -2,12 +2,23 @@
 	{
 		"year": "0",
 		"name": "default",
-		"gotoindex": 80
+		"gotoindex": 90
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"gotoindex": 80
+		"gotoindex": 90
+	},
+	{
+		"year": "2023",
+		"name": "fridge",
+		"file": "fridge",
+		"index": 90,
+		"prev": "/2023/hotdrinks",
+		"next": "/2023/",
+		"tags": [
+			"rant"
+		]
 	},
 	{
 		"year": "2023",
@@ -15,7 +26,7 @@
 		"file": "hotdrinks",
 		"index": 80,
 		"prev": "/2023/sARTurday 1",
-		"next": "/2023/",
+		"next": "/2023/fridge",
 		"tags": [
 			"rant"
 		]

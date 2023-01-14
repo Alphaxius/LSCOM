@@ -60,8 +60,8 @@ const interpretHtml = (content) => {
 						key={keyMaker()}
 						title={splitInnerValues[1]}
 						src={"https://drive.google.com/file/d/"+splitInnerValues[0]+"/preview"}
-						width="90%"
-						height="600vh"
+						width={window.innerWidth * 0.80}
+						height={window.innerWidth * 0.45}
 					>
 					</iframe>
 				);
