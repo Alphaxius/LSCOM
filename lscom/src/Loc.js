@@ -45,6 +45,7 @@ const blogIndex = () => {
 if (__p.length === 0) {
 	__i = "home";
 } else if (__p[0] === "404") {
+  document.title = "Wrong way Bradley";
 	__i = "404";
 } else if (__p[0] === "" ||
 					 __p[0].toLowerCase() === "home") {
@@ -52,6 +53,19 @@ if (__p.length === 0) {
 		to404();
 	} else {
 		__i = "home";
+	}
+} else if (__p[0].toLowerCase() === "art") {
+  if (__p.length > 1) {// && !(__p.length === 2 && __p[1] === "")) {
+		to404();
+	} else {
+    document.title="Laser Beam";
+		__i = "art";
+	}
+} else if (__p[0].toLowerCase() === "about") {
+  if (__p.length > 1) {// && !(__p.length === 2 && __p[1] === "")) {
+		to404();
+	} else {
+		__i = "about";
 	}
 } else if (__p[0].toLowerCase() === "blog") {
 	document.title="Blog 1118";

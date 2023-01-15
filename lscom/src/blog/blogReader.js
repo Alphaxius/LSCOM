@@ -1,6 +1,9 @@
-
+/*
 import HiderI from '../Hider';
 import Utitle from '../Utitle';
+*/
+
+import HiderI, {Utitle, Gimage} from '../modgeuls';
 
 const TitleT = (value) => {
 	return ( <h2 title={value.value}>{value.value}</h2> );
@@ -55,16 +58,7 @@ const interpretHtml = (content) => {
 			case "hovertext":
 				return <Utitle text={splitInnerValues[0]} title={splitInnerValues[1]} key={keyMaker()} />;
 			case "image":
-				return (
-					<iframe
-						key={keyMaker()}
-						title={splitInnerValues[1]}
-						src={"https://drive.google.com/file/d/"+splitInnerValues[0]+"/preview"}
-						width={window.innerWidth * 0.80}
-						height={window.innerWidth * 0.45}
-					>
-					</iframe>
-				);
+        return <Gimage imageId={splitInnerValues[0]} title={splitInnerValues[1]} key={keyMaker()} />
 			default:
 				return <div key={keyMaker()}>Unknown tag type</div>;
 		}

@@ -108,8 +108,10 @@ const Tabs = () => {
     <div id="tabContainer">
       <Tab tabName="Home" />
       <Tab tabName="Blog" />
+      <Tab tabName="Art" />
       <Tab tabName="GitHub" />
       <Tab tabName="LinkedIn" />
+      <Tab tabName="About" />
     </div>
   );
 };
