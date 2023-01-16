@@ -2,12 +2,24 @@
 	{
 		"year": "0",
 		"name": "default",
-		"gotoindex": 100
+		"gotoindex": 110
 	},
 	{
 		"year": "2023",
 		"name": "default",
-		"gotoindex": 100
+		"gotoindex": 110
+	},
+	{
+		"year": "2023",
+		"name": "dice",
+		"file": "dice",
+		"index": 110,
+		"prev": "/2023/legendsandlattesreview",
+		"next": "/2023/",
+		"tags": [
+			"rant",
+      "math"
+		]
 	},
 	{
 		"year": "2023",
@@ -15,7 +27,7 @@
 		"file": "lattes",
 		"index": 100,
 		"prev": "/2023/fridge",
-		"next": "/2023/",
+		"next": "/2023/dice",
 		"tags": [
 			"rant",
       "bookreport"

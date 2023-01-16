@@ -1,0 +1,26 @@
+{
+  "title": "Normal Dice",
+  "date": "20230116",
+  "sections": [
+    {
+      "header": "The \"Problem\"",
+      "content": "<p>Ok so you know a d20, 20 sided die, labeled 1 to 20, good for ttrpgs. When you want to adjust the probability of getting a high roll, you add something to it. I think this is far too simple. I want a somewhat normal set of dice that improve the probability distrbution without simply adding. Complexity for complexities sake is a terrible idea, so here I will go ahead and do it anyway.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Two dice solution",
+      "content": "<p>Two d10s (10 sided dice) does normalize the numbers, and it improves the chances of getting a high number -- because you can't get a 1 anymore. I have a slightly better option.</p><p>Let's get two custom d6s with the sides as follows:</p><p><pre><code>  1  3  5  7  9 11</code></pre></p><p><pre><code>  0  1  4  5  8  9</code></pre></p><p>This gives a fairly triangular distribution, much more normal than 2d10 but far from perfect. A 1 or 20 is 2.8% probable, compared to 5% for a standard d20. An 11 (approximately the midpoint of a d20) is 8.3% probable. I like this better, but lets get more complex.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Three dice solution.",
+      "content": "<p>Following a similar formula to generate two d6s which add up to a range from 1 to 20, we can produce a set of three d6s that do the same.</p><p><pre><code>1 2 3 4 5 6</code></pre></p><p><pre><code>0 1 2 3 4 5</code></pre></p><p><pre><code>0 2 4 5 7 9</code></pre></p><p>Which have nominal skew 0.005353910073 and kurtosis -1.582413517. ALSO! It keeps a mean of 10.5, so that's very nice. This means its a bit flat and skewed to the right compared to a real normal curve. Loving those sig figs. These are kind of weird dice. But! It's basically two regular d6s and one real goofy one.</p><p>So, it's more normal than the two dice solutions, but what about bonuses? You'd still have to add stuff right?</p><p>Nah, you just use a different third die!</p><p><pre><code>0 3 5 7 9 9</code></pre></p><p>This would be a plus one die, bringing the mean to 11.5. And this could keep going! But, I tried to make this work. I was only able to get to +2 before it just made more sense to add a bonus instead of swapping dies. So, meh, whatever. I might come back to this and try to come up with a bigger set, maybe four dice? But here is the set of dice to be rolled in threes, with the third die adjusting the skew of the normal curve.</p><p>Base Dice</p><p><pre><code>     1 2 3 4 5 6</code></pre></p><p><pre><code>     0 1 2 3 4 5</code></pre></p><p>Third Dice</p><p><pre><code> -3: 0 0 0 0 0 9</code></pre></p><p><pre><code> -2: 0 0 1 2 3 9</code></pre></p><p><pre><code> -1: 0 1 2 4 5 9</code></pre></p><p><b><pre><code> +0: 0 2 4 5 7 9</code></pre></b></p><p><pre><code> +1: 0 3 5 7 9 9</code></pre></p><p><pre><code> +2: 0 5 7 9 9 9</code></pre></p><p><pre><code> +3: 0 9 9 9 9 9</code></pre></p><p>I think it would be incredibly exciting, in a game, to be told \"roll the -3 die\" and get that 9. The tension of potentially still getting a nat 20 - actually with the same likelyhood as rolling the standard third die, still feels like it's less likely. I think it's cool.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Making the dice",
+      "content": "<p>I actually made a set of the two dice! They're pretty cool, I 3d printed them before realizing that you can buy a bunch of blank dice online and get a sharpie -- which is what I plan to do next. I haven't been able to try them in a game yet, I'm hoping I will be allowed to in my next ttrpg, whatever that may be.</p>",
+      "startshidden": false
+    }
+  ]
+}
