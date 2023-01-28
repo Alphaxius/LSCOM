@@ -1,0 +1,41 @@
+Quickly and simply setting up git and npm from scratch, minimum viable solution
+apt install git
+apt install npm
+apt install python
+wget <git-credential-manager tar gz uri>
+tar -xvf <path to tarball> -C /usr/local/bin
+git-credential-manager configure
+git config --global credential.credentialStore cache
+git config --global user.name
+git config --global user.email
+git clone https://www.github.com/Alphaxius/LSCOM
+cd to LSCOM/lscom
+npm install
+
+Blog post workflow instructions
+put a temp file in LSCOM/lscom/src/blog/
+python
+import update_sitemap
+update_sitemap("tempfile.txt")
+exit python
+mv tempfile.json to LSCOM/lscom/src/blog/ with intended name
+rm temp text file in blog folder
+update LSCOM/lscom/public/sitemap.xml with new name
+update LSCOM/lscom/src/blog/blogIndex.json
+update the default routes
+add the newest route
+update the previous route with the correct next link
+
+Temp text file blog post format:
+SOFTitle
+Year
+Date
+Tags (space delimited)
+
+Heading
+Paragraph
+Paragraph
+
+#Heading (starts hidden with #)
+Paragraph
+ParagraphEOF
