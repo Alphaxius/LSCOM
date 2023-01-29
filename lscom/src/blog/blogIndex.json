@@ -1,12 +1,6 @@
 [
 	{
-		"year": "0",
-		"name": "default",
-		"gotoindex": 120
-	},
-	{
-		"year": "2023",
-		"name": "default",
+		"gotoyear": "2023",
 		"gotoindex": 120
 	},
 	{
@@ -144,10 +138,5 @@
 			"rant",
 			"math"
 		]
-	},
-	{
-		"year": "2022",
-		"name": "default",
-		"gotoindex": 30
 	}
 ]

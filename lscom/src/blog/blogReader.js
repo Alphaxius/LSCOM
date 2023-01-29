@@ -4,6 +4,55 @@ import Utitle from '../Utitle';
 */
 
 import HiderI, {Utitle, Gimage} from '../modgeuls';
+import wl, {to404} from '../Loc';
+
+const blogIndices = require('./blogIndex.json');
+
+const blogQuery = () => {
+  let search;
+  let mostrecentindex = blogIndices[0].gotoindex;
+  if (wl.p.length === 1) search = blogIndices[0].gotoyear;
+  else search = wl.p[1];
+  let indexHits = [];
+  for (const qIndex of blogIndices) {
+    if (qIndex.index === mostrecentindex) {
+      indexHits.splice(0,0,qIndex);
+    }
+    if (!!qIndex.year && qIndex.year === search) {
+      indexHits.push(qIndex);
+    }
+    else if (!!qIndex.tags && qIndex.tags.indexOf(search) >= 0) {
+      indexHits.push(qIndex);
+    }
+  }
+  return indexHits;
+}
+
+const blogIndex = () => {
+	if (wl.p.length < 1) return false;
+	if (wl.p[0].toLowerCase() !== "blog") return false;
+	if (wl.p.length > 3) to404();
+  if (wl.p.length < 3) return blogQuery();
+	let year = wl.p[1];
+	let name = wl.p[2];
+	for (const qIndex of blogIndices) {
+		if (year !== qIndex.year) continue;
+		if (name === qIndex.name) return qIndex;
+	}
+	to404(); // page doesn't exist
+  /*
+	if (!index.gotoindex) return index; // this is not a default page
+  let indexHits = [];
+  for (const qIndex2 of blogIndices) {
+    if (qIndex2[check] === against) indexHits.push(qIndex2);
+  }
+  */
+}
+
+
+
+
+
 
 const TitleT = (value) => {
 	return ( <h2 title={value.value}>{value.value}</h2> );
@@ -132,3 +181,4 @@ const BlogReader = (blogContent) => {
 }
 
 export default BlogReader;
+export {blogIndex};

@@ -15,31 +15,8 @@ window.location.search.slice(1).split('&').forEach((q) => {
 let __h = window.location.hash;
 let __i;
 
-const blogIndices = require('./blog/blogIndex.json');
-
 const to404 = () => {
 	window.location.href = __o + "/404" + window.location.pathname + window.location.search + __h;
-}
-
-const blogIndex = () => {
-	if (__p.length < 1) return false;
-	if (__p[0].toLowerCase() !== "blog") return false;
-	if (__p.length > 3) to404();
-	let year = "0";
-	let name = "default";
-	if (__p.length > 1) year = __p[1];
-	if (__p.length > 2) name = __p[2];
-	let index;
-	for (const qIndex1 of blogIndices) {
-		if (year !== qIndex1.year) continue;
-		if (name === qIndex1.name) {index = qIndex1; break; }
-	}
-	if (!index) to404()
-	if (!index.gotoindex) return index;
-	for (const qIndex2 of blogIndices) {
-		if (index.gotoindex === qIndex2.index) return qIndex2;
-	}
-	to404();
 }
 
 if (__p.length === 0) {
@@ -127,4 +104,3 @@ const url404 = __o + "/" + __p.slice(1).join("/") + window.location.search + __h
 export default wl;
 export {url404};
 export {to404};
-export {blogIndex};

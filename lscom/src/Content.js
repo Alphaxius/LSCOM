@@ -9,20 +9,34 @@
 import React from 'react';
 //import wowbox from './sillythings/wow-box';
 //import HiderI from './Hider';
-import wl, {url404, blogIndex} from './Loc';
-import BlogReader from './blog/blogReader';
+import wl, {url404} from './Loc';
+import BlogReader, {blogIndex} from './blog/blogReader';
 //import Utitle from './Utitle';
 import {Utitle, Gimage} from './modgeuls';
 
 const blog = () => {
 	const index = blogIndex();
-	if (!index) return forofor;
+	if (!index) return forofor; // should have ()?
 	let blogContent = ""
+	if (wl.p.length < 3) {
+    let mostRecentLink = <p><a href={wl.o + "/Blog/"+index[0].year+"/"+index[0].name}>Most recent post</a></p>;
+    index.splice(0,1);
+    let details = [];
+    for (const dex of index) {
+      details.push(<p key={"blogdetail"+dex.index}><a href={wl.o + "/Blog/"+dex.year+"/"+dex.name}>{dex.year+"/"+dex.name}</a></p>);
+    }
+		return (
+      <div className="ContentContainer">
+        {mostRecentLink}
+        {details}
+      </div>
+    )
+	}
 	try {
 		blogContent = <BlogReader blogContent={require('./blog/'+index.file+'.json')} />;
 	}
 	catch (error) {
-		return forofor();
+		return forofor; // should have ()?
 	}
 	finally {
 		return (
