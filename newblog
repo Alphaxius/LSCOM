@@ -1,2 +1,8 @@
-cp blogtemplate.txt newblog.txt
-vim newblog.txt
+if [ -e newblog.txt ]
+then
+	py -m update_sitemap
+	rm newblog.txt
+else
+	cp blogtemplate.txt newblog.txt
+	vim newblog.txt
+fi

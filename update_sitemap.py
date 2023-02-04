@@ -141,7 +141,7 @@ def main():
 		json.dump(blogjson, newblogfile, indent = 2)
 	with open("./lscom/src/blog/blogIndex.json", "w") as blogindexfile:
 		json.dump(blogindexjson, blogindexfile, indent = 2)
-	with open("./lscom/public/sitemap.xml", 'w') as sitemapfile:
+	with open("./lscom/public/sitemap.xml", 'wb') as sitemapfile:
 		sitemapfile.write(ET.tostring(sitemapxml, xml_declaration=True, encoding="UTF-8"))
 	
 	

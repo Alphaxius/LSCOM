@@ -15,12 +15,13 @@ npm install
 
 Blog post workflow instructions
 ./newblog
-nano newblog.txt
-py -m update_sitemap
+file automatically opens for editing
+./newblog
 
 
 Temp text file blog post format:
-SOFTitle
+<SOF>URL-name
+Title
 Year
 Date
 Tags (space delimited)
@@ -31,4 +32,4 @@ Paragraph
 
 #Heading (starts hidden with #)
 Paragraph
-ParagraphEOF
+Paragraph<EOF>
