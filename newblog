@@ -1,0 +1,2 @@
+cp blogtemplate.txt newblog.txt
+vim newblog.txt

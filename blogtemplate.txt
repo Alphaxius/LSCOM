@@ -1,0 +1,8 @@
+uri
+title
+year
+date
+tags
+
+heading
+paragraph
