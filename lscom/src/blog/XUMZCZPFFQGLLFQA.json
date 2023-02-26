@@ -1,0 +1,21 @@
+{
+  "title": "sARTurday 2",
+  "date": "20230225",
+  "sections": [
+    {
+      "header": "Some art",
+      "content": "<p><image>1879PmfeeEEZW3DY36njnXxeBFzYMhX6F#Blender Donut Tutorial Donut</image></p>",
+      "startshidden": false
+    },
+    {
+      "header": "Why the donut",
+      "content": "<p>I made this a while ago! I followed the donut tutorial on YouTube when Blender 3 came out. I really liked the node system for making the textures and for the model. Visual programming is really great for basic things, and I think more programs should find ways to utilize it.</p><p>I do really like this piece. I think I made it pretty cute. I love the color of the frosting, that greenie blueie sort of color. I never know what to call it. Like, right in between green-blue and blue-green. It's my favorite color to paint my nails! It was actually the first nail color I ever bought.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Mind the other gap",
+      "content": "<p>So I've not been posting as much as I thought I would be at the beginning of the year. Even I, the most fantastic person, can be faulted by the concept of the new year's resolution. (/s on the \"I'm the most fantastic\" phrasing). I suppose I didn't really expect to have to follow that idea, but I did want to. However, I did just finish moving, so I will have some more free time. I would like to continue at least the sARTurday tradition<pre>    </pre><i>\"tradition\"</i>.</p><p>I am not promising anything, but I would also like to put up a write up of the python I wrote to parse plain text into a json file which is then parsed using javascript into react components, which is then parsed into html, which of course is then parsed into (lower and lower layers of abstraction ensues). But anyway, I wrote some cool python code. I'll try to show you it. You, the unknown viewer. The void which I talk to. Hello void.</p>",
+      "startshidden": false
+    }
+  ]
+}
