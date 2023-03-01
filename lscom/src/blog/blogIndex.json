@@ -1,7 +1,18 @@
 [
   {
     "gotoyear": "2023",
-    "gotoindex": 140
+    "gotoindex": 150
+  },
+  {
+    "year": "2023",
+    "name": "dune1",
+    "file": "YRNQWDARRZHABZXW",
+    "index": 150,
+    "prev": "/2023/sARTurday 2",
+    "next": "/2023/dune1",
+    "tags": [
+      "bookreport"
+    ]
   },
   {
     "year": "2023",
@@ -9,7 +20,7 @@
     "file": "XUMZCZPFFQGLLFQA",
     "index": 140,
     "prev": "/2023/noon",
-    "next": "/2023/sARTurday 2",
+    "next": "/2023/dune1",
     "tags": [
       "rant",
       "art",

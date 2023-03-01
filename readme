@@ -16,8 +16,8 @@ npm install
 Blog post workflow instructions
 ./newblog
 file automatically opens for editing
-./newblog
-
+after editing, python script will be run to convert to json and update the sitemap and blog index
+push to git
 
 Temp text file blog post format:
 <SOF>URL-name

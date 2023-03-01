@@ -1,11 +1,4 @@
-if [ -e newblog.txt ]
-then
-	py -m update_sitemap
-	rm newblog.txt
-	git add .
-	git commit
-	git push
-else
-	cp blogtemplate.txt newblog.txt
-	vim newblog.txt
-fi
+cp blogtemplate.txt newblog.txt
+vim newblog.txt
+py -m update_sitemap
+rm newblog.txt
