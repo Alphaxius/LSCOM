@@ -1,7 +1,19 @@
 [
   {
     "gotoyear": "2023",
-    "gotoindex": 150
+    "gotoindex": 160
+  },
+  {
+    "year": "2023",
+    "name": "sARTurday 3",
+    "file": "XKELUWANVIPUQMQL",
+    "index": 160,
+    "prev": "/2023/dune1",
+    "next": "/2023/sARTurday 3",
+    "tags": [
+      "art",
+      "sarturday"
+    ]
   },
   {
     "year": "2023",
@@ -9,7 +21,7 @@
     "file": "YRNQWDARRZHABZXW",
     "index": 150,
     "prev": "/2023/sARTurday 2",
-    "next": "/2023/dune1",
+    "next": "/2023/sARTurday 3",
     "tags": [
       "bookreport"
     ]
