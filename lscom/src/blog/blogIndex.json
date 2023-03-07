@@ -1,8 +1,19 @@
 [
   {
     "gotoyear": "2023",
-    "gotoindex": 160
+    "gotoindex": 170
   },
+  {
+    "year": "2023",
+    "name": "modnine",
+    "file": "TWDDJEXBFKRDQBIP",
+    "index": 170,
+    "prev": "/2023/sARTurday 3",
+    "next": "/2023/modnine",
+    "tags": [
+      "math"
+		]
+	},
   {
     "year": "2023",
     "name": "sARTurday 3",
