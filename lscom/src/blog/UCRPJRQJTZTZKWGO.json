@@ -1,0 +1,26 @@
+{
+  "title": "another sarturday another",
+  "date": "20230311",
+  "sections": [
+    {
+      "header": "art to start",
+      "content": "<p><image>12Xm2mIGlXKk-h7eKrpFe-oqp-WBOsvFh#a digitally created image of a planet in space</image></p>",
+      "startshidden": false
+    },
+    {
+      "header": "When did I make this?",
+      "content": "<p>I'm not entirely sure when I made this picture, but I think I was in high school, maybe junior high. I made it on a tiny toshiba laptop that I got for I think my birthday one year. I mostly used it for homework. I learned how to use html on that laptop, and I had also been given a copy of photoshop, the cheap version whose name I can't remember. I made this using that, I think, but it may have been gimp which I still use today. At that time it would have been one of the early version 1's of gimp. Anyway, this was the first picture I spent multiple hours making. I actually spent a few days tweaking layer settings and colors and little details. I'm proud of this picture.</p><p>At some point, I had lost the original file. Probably trying to clean up my hard drive, or maybe I had downloaded malware in ignorance, I can't recall. But I had lost a lot of files, including this original. What I've uploaded here was recovered from Windows, because it had saved a compressed jpeg copy in its cache because I had used it as a background image. So thankfully, I was able to salvage it.</p><p>I like to look at this and remember that when I spend some extra time on something to really nail it, it can be worth it sometimes! Of course, I do know the practicality of jank, and making an cheap ad-hoc something or other. But something like this, whose original purpose was to teach me more about lighting and to serve as a background image (as all of my art is meant for, really) and whose purpose now is still to serve as a background image, but also to remind me that I should spend time on things, I should spend time on things. What a sentence.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Would I make this again?",
+      "content": "<p>No, I don't think I would. I have already made this. I could probably make this better now than how I made it then. I think if I remade this, it wouldn't mean as much to me, and I think that would not make me happy. One other reason I make art. And honestly, something as simple as this picture would be so simple to make in an ai image generator. And that is to speak nothing of the majesty of actual photos of our planetary neighbors, for which something drawn such as this could never capture, in my own opinion.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Smallness",
+      "content": "<p>Often, I find my mind wandering about planets and thinking about the relative size of my person and the scale of the universe. I don't know why, it's a pointless task. And so much philosophy is already there, I don't think I've had a single original thought regarding the subject. I still like to do it. It is an interesting sensation to feel so small, perhaps it is humbling in a way that other trains of thought cannot bring you, a station with only one route to extend the metaphor.</p><p>To feel big again, if I want to, I just remind myself that the universe cannot draw a picture of itself. And I think that's neat.</p>",
+      "startshidden": false
+    }
+  ]
+}
