@@ -1,7 +1,18 @@
 [
   {
     "gotoyear": "2023",
-    "gotoindex": 180
+    "gotoindex": 190
+  },
+  {
+    "year": "2023",
+    "name": "horses",
+    "file": "YXXQNAYYPEZEAWXH",
+    "index": 190,
+    "prev": "/2023/sARTurday 4",
+    "next": "/2023/horses",
+    "tags": [
+      "rant"
+    ]
   },
   {
     "year": "2023",
@@ -9,7 +20,7 @@
     "file": "UCRPJRQJTZTZKWGO",
     "index": 180,
     "prev": "/2023/modnine",
-    "next": "/2023/sARTurday 4",
+    "next": "/2023/horses",
     "tags": [
       "sarturday",
       "art",
