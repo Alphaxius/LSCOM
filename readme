@@ -7,17 +7,22 @@ wget <git-credential-manager tar gz uri>
 tar -xvf <path to tarball> -C /usr/local/bin
 git-credential-manager configure
 git config --global credential.credentialStore cache
+(if using wsl ubuntu, follow the folowing 3 instructions)
+sudo install wslu
+vim .bashrc
+add the line "export BROWSER=wslview" without quotes to the bottom of the file
 git config --global user.name
 git config --global user.email
 git clone https://www.github.com/Alphaxius/LSCOM
 cd to LSCOM/lscom
 npm install
-
+install nvm instructions on : https://github.com/nvm-sh/nvm
+nvm install 16.12
 Blog post workflow instructions
 ./newblog
 file automatically opens for editing
 after editing, python script will be run to convert to json and update the sitemap and blog index
-push to git
+push to git (./dogit for speed)
 
 Temp text file blog post format:
 <SOF>URL-name
