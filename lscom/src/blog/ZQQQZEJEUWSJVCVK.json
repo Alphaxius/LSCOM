@@ -1,0 +1,31 @@
+{
+  "title": "Doing my job better with bing chat",
+  "date": "20230521",
+  "sections": [
+    {
+      "header": "Computer updates",
+      "content": "<p>Recently, I decided I would reinstall windows on my computer. I screwed up something with regedit trying to make my system font comic sans because I thought it would be funny. I also have a much easier time reading comic sans over Segoe UI but maybe that's just a me problem. Anyway, after doing this, I always spin up a new WSL Ubuntu machine so that I can work on the website on my big computer instead of my Chromebook. So, something changed with the way that Ubuntu gets set up, and I couldn't get git-credential-manager to work. <hovertext>...#Yes, I am aware that there are better credential managers, but that's what I know now and I am trying to learn other things.</hovertext> This is where the fun stuff begins.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Manual searching",
+      "content": "<p>The first thing I try of course is just searching the error, see if something came up. I found a stack overflow article that was adjacent, and might have worked, but it was a pretty different approach. Yuck! Changing strategies? Absurd. I'll stick with it thank you.</p>",
+      "startshidden": false
+    },
+    {
+      "header": "Chatting with a robot",
+      "content": "<p>I opened up my favorite-so-far robot and put in a prompt for the search. I say that because I've found that using full sentences actually gets better responses than just keyword searching. Very weird. First thing it pulls up is the same stack overflow article that I found when searching. It took a few back and forths to convince the robot that this wasn't actually going to solve the issue. Then it just kind of pulled something out of nowhere.</p><p>It then asked me to open .bashrc and add a line. Tried it, and it didn't work. I told the robot that it didn't work, then it told me to install wslu. That did it, that's all it took. It gave a source too [1.]</p>",
+      "startshidden": false
+    },
+    {
+      "header": "The solution",
+      "content": "<p>In order to use git-credential-manager from WSL Ubuntu 22.04:</p><p>* install git-credential-manager using the curl or wget commands as listed on their GitHub page [2.]</p><p>* install wslu</p><p>* edit .bashrc and add the line \"export BROWSER=wslview\" without quotes to the end.</p><p>* do the following three commands:</p><p><pre><code><p>git config --global user.name [put your username here]</p><p>git config --global user.email [put your email here]</p><p>git config --global credential.credentialStore cache</p></code></pre></p>",
+      "startshidden": false
+    },
+    {
+      "header": "Sources",
+      "content": "<p><plaina>1. https://superuser.com/questions/1262977/open-browser-in-host-system-from-windows-subsystem-for-linux</plaina></p><p><plaina>2. https://www.github.com/nvm-sh/nvm</plaina></p>",
+      "startshidden": false
+    }
+  ]
+}

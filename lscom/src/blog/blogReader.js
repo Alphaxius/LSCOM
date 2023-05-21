@@ -106,6 +106,8 @@ const interpretHtml = (content) => {
 				return <pre key={keyMaker()}>{innerValues}</pre>;
 			case "hovertext":
 				return <Utitle text={splitInnerValues[0]} title={splitInnerValues[1]} key={keyMaker()} />;
+			case "plaina":
+				return <a key={keyMaker()} href={innerValues}>{innerValues}</a>
 			case "image":
         return <Gimage imageId={splitInnerValues[0]} title={splitInnerValues[1]} key={keyMaker()} />
 			default:
