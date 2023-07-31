@@ -1,0 +1,284 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<script> 
+		
+		const randInt = (left_include, right_include) => {
+			const range = right_include - left_include;
+			return Math.floor(range * Math.random()) + left_include;
+		}
+		
+		const initializeNumbers = () => {
+			document.getElementById("numbertoguess").innerHTML = randInt(100, 500);
+			const numberOfBigNums = randInt(1,3);
+			const bigNumsToChoose = [12, 15, 20, 25, 50, 60];
+			let numsChosen = [];
+			for (let dex = 0; dex < numberOfBigNums; dex++) {
+				numsChosen[dex] = bigNumsToChoose.splice(randInt(0,5-dex), 1)
+			}
+			for (let dex = numberOfBigNums; dex < 6; dex++) {
+				numsChosen[dex] = randInt(1,10);
+			}
+			const numberCells = document.getElementsByClassName("number");
+			for (const cell of numberCells) {
+				cell.innerHTML = numsChosen.pop();
+			}
+		}
+		
+		
+		const numberCellPressed = (numCell) => {
+			
+			// check that operation is selected
+			const operationCellActive = document.getElementsByClassName("operations-cell-active");
+			if (operationCellActive.length !== 1) return;
+			
+			// get active number cells
+			const activeNumbers = document.getElementsByClassName("number-cell-active");
+			const activeNumbersLength = activeNumbers.length;
+			
+			// update pressed cell
+			numCell.classList.add("number-cell-active");
+			numCell.value = activeNumbersLength; // ordering of presses
+			
+			// end here if not two numbers
+			if (activeNumbers.length < 2) return;
+			
+			// sort active number cells by order pressed
+			let numCellsByValue = [];
+			for (const activeNumCell of activeNumbers) {
+				numCellsByValue.push(activeNumCell);
+			} 
+			numCellsByValue.sort((a, b) => {
+				if (a.value < b.value) return -1;
+				if (a.value > b.value) return 1;
+				return 0;
+			});
+			
+			// extract numbers from active number cells
+			const numbers = [];
+			for (const numCellByValue of numCellsByValue) {
+				for (const child of numCellByValue.children) {
+					numbers.push(child.innerHTML);
+				}
+			}
+			
+			// get operation
+			let opCellValue;
+			for (const opCell of operationCellActive) {
+				opCellValue = opCell.value;
+			}
+			const opFuncs = [(a,b)=>{return parseInt(a)+parseInt(b)},
+											 (a,b)=>{return parseInt(a)-parseInt(b)},
+											 (a,b)=>{return parseInt(a)*parseInt(b)},
+											 (a,b)=>{return parseInt(a)/parseInt(b)}
+											];
+			const opFunc = opFuncs[opCellValue];
+			
+			// perform operation
+			const newValue = opFunc(numbers[0],numbers[1]);
+			
+			// put operation into the list at the bottom
+			let htmlToAppend = "<p>"+numbers[0]+[" + "," − "," × "," / "][opCellValue]+numbers[1]+" = "+newValue+"</p>";
+			document.getElementById("ops-list").insertAdjacentHTML("beforeend", htmlToAppend);
+			
+			// set value
+			for (const child of numCell.children) {
+				child.innerHTML = newValue;
+			}
+			
+			// remove activity
+			numCell.classList.remove("number-cell-active");
+			
+			// clear activity
+			for (const activeCell of activeNumbers) {
+				activeCell.remove();
+			}
+			for (const opCell of operationCellActive) {
+				opCell.classList.remove("operations-cell-active");
+			}
+			
+			// disable number buttons
+			const numberCells = document.getElementsByClassName("numbercell");
+			for (numberCell of numberCells) {
+				numberCell.classList.add("disabled");
+			}
+			
+			//check if the new number is correct
+			const toastMessageTextOptions = [
+				"Yeah that's it!",
+				"Nice!",
+				"Look at you go!",
+				"Aren't you a mathemagician!",
+				"Massive and giant.",
+				"Incredible.",
+				"Oooooooowowie!",
+				"That's the answer!"
+				];
+			if (newValue == document.getElementById("numbertoguess").innerHTML) {
+				document.getElementById("headercontainer")
+					.insertAdjacentHTML("beforeend", "<p>"+toastMessageTextOptions[randInt(0,7)]+"</p>");
+				for (const opCell of document.getElementsByClassName("operationscell")) {
+					opCell.classList.add("disabled");
+					opCell.onclick = ()=>{}; 
+				}
+			}
+			
+			
+		}
+		
+		
+		const operationsCellPressed = (opCell) => {
+			
+			// unactivate all operation buttons
+			const operationsCells = document.getElementsByClassName("operations-cell-active");
+			for (const operationsCell of operationsCells) {
+				operationsCell.classList.remove("operations-cell-active");
+			}
+			
+			// activate new button
+			opCell.classList.add("operations-cell-active");
+			
+			// undisable number buttons
+			const numberCells = document.getElementsByClassName("numbercell");
+			for (numberCell of numberCells) {
+				numberCell.classList.remove("disabled");
+			}
+			
+		}
+	</script>
+	<style>
+		body {
+			text-align: center;
+			font-size: 16pt;
+			font-family: 'Courgette', cursive;
+		}
+		button:hover:not(.disabled) {
+			background-color: darkgray;
+			color: black;
+		}
+		button:active:not(.disabled) {
+			background-color: black;
+			color: white;
+		}
+		.innercontentcontainer {
+			width: maximum(1000px, 100%);
+		}
+		.bordered {
+			border: 1px;
+			border-color: black;
+			border: dashed;
+			border-radius: 1em;
+		}
+		.operationsgrid {
+			width: 60%;
+			margin-left: 20%;
+			display: grid;
+			grid-template-columns: 25% 25% 25% 25%;
+			margin-bottom: 2%;
+		}
+		.numbersavailablegrid {
+			width: 60%;
+			margin-left: 20%; 
+			display: grid;
+			grid-template-columns: 33.33% 33.33% 33.33%;
+		}
+		.operationscell,
+		.numbercell {
+			width: 80%;
+			margin-top: 10%;
+			margin-left: 10%;
+			margin-bottom: 10%;
+		}
+		.operationscell,
+		.number-bottom-cell {
+		}
+		.number-cell-active,
+		.operations-cell-active {
+			background-color: darkgray;
+			color: white;
+		}
+		.number-left-cell {
+		}
+		.operation,
+		.number {
+			font-size: 200%;
+			font-family: 'Courgette', cursive;
+		}
+		
+	</style>
+	</head>
+<body onload="initializeNumbers()">
+	<div class="innercontentcontainer">
+		<div id="headercontainer">
+			<h1>Make the Number</h1>
+			<p>Choose an operation, then choose two numbers.</p>
+		</div>
+		<h2 class="numbertoguess" id="numbertoguess">100</h2>
+		<div class="operationsgrid bordered">
+			<button class="operationscell bordered operations-left-cell"
+							id="operationCell0"
+							value="0"
+							onclick="operationsCellPressed(this)">
+				<p class="operation" id="operation0">+</p>
+			</button>
+			<button class="operationscell bordered"
+							id="operationCell1"
+							value="1"
+							onclick="operationsCellPressed(this)">
+				<p class="operation" id="operation1">−</p>
+			</button>
+			<button class="operationscell bordered"
+							id="operationCell2"
+							value="2"
+							onclick="operationsCellPressed(this)">
+				<p class="operation" id="operation2">×</p>
+			</button>
+			<button class="operationscell bordered"
+							id="operationCell3"
+							value="3"
+							onclick="operationsCellPressed(this)">
+				<p class="operation" id="operation3">/</p>
+			</button>
+		</div>
+		<div class="numbersavailablegrid bordered">
+
+			<button class="numbercell bordered disabled number-left-cell"
+							onclick="numberCellPressed(this, 'number0')">
+				<p class="number" id="number0">1</p>
+			</button>
+			<button class="numbercell bordered disabled"
+							onclick="numberCellPressed(this, 'number1')">
+				<p class="number" id="number1">1</p>
+			</button>
+			<button class="numbercell bordered disabled"
+							onclick="numberCellPressed(this, 'number2')">
+				<p class="number" id="number2">1</p>
+			</button>
+
+			<button class="numbercell bordered disabled number-bottom-cell number-left-cell"
+							onclick="numberCellPressed(this, 'number3')">
+				<p class="number" id="number3">1</p>
+			</button>
+			<button class="numbercell bordered disabled number-bottom-cell"
+							onclick="numberCellPressed(this, 'number4')">
+				<p class="number" id="number4">1</p>
+			</button>
+			<button class="numbercell bordered disabled number-bottom-cell"
+							onclick="numberCellPressed(this, 'number5')">
+				<p class="number" id="number5">1</p>
+			</button>
+		</div>
+		<div id="ops-list"></div>
+	</div>
+</body>
+	
+</html>
