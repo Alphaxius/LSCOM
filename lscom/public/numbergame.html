@@ -13,7 +13,7 @@
 	<script> 
 		
 		const randInt = (left_include, right_include) => {
-			const range = right_include - left_include;
+			const range = right_include - left_include + 1;
 			return Math.floor(range * Math.random()) + left_include;
 		}
 		
@@ -179,15 +179,15 @@
 			border-radius: 1em;
 		}
 		.operationsgrid {
-			width: 60%;
-			margin-left: 20%;
+			width: 90%;
+			margin-left: 5%;
 			display: grid;
 			grid-template-columns: 25% 25% 25% 25%;
 			margin-bottom: 2%;
 		}
 		.numbersavailablegrid {
-			width: 60%;
-			margin-left: 20%; 
+			width: 90%;
+			margin-left: 5%; 
 			display: grid;
 			grid-template-columns: 33.33% 33.33% 33.33%;
 		}
