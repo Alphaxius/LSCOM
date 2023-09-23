@@ -46,7 +46,7 @@
 			const activeNumbersLength = activeNumbers.length;
 
 			// remove active if already pressed
-			if (typeof activeNumbers.namedItem(numCell.id) !== 'undefined') {
+			if (activeNumbers in activeNumbers) {
 				numCell.classList.remove("number-cell-active");
 				numCell.value = 0;
 				return;
