@@ -47,6 +47,7 @@
 
 			// remove active if already pressed
 			if (activeNumbers.includes(numCell)) {
+				console.log("Removing cell");
 				numCell.classList.remove("number-cell-active");
 				numCell.value = 0;
 				return;
