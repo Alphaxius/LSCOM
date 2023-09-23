@@ -44,6 +44,13 @@
 			// get active number cells
 			const activeNumbers = document.getElementsByClassName("number-cell-active");
 			const activeNumbersLength = activeNumbers.length;
+
+			// remove active if already pressed
+			if (activeNumbers.includes(numCell)) {
+				numCell.classList.remove("number-cell-active");
+				numCell.value = 0;
+				return;
+			}
 			
 			// update pressed cell
 			numCell.classList.add("number-cell-active");
