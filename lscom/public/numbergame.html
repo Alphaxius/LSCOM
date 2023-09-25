@@ -48,6 +48,7 @@
 			// remove active if already pressed
 			console.log(numCell in activeNumbers); // this always returns false
 			console.log(activeNumbers[numCell.id]); // this always returns undefined
+			console.log("number-cell-active" in numCell.classList);
 			if (numCell in activeNumbers) {
 				numCell.classList.remove("number-cell-active");
 				numCell.value = 0;
