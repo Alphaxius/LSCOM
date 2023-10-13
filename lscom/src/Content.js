@@ -85,27 +85,20 @@ const art = () => {
 
 const about = (
   <div className="ContentContainer">
-    <h2>Ollo, call me Laser</h2>
-    <h3>About Me</h3>
-    <p>I'm Jess, I know some stuff about electronics and computers and the like.
-      I have a degree in electrical engineering, I minored in computer science and mathematics.
-      I'm seeking my CCNA as I work in IT and Database management. I'm seeking training in data science
-      (maybeee considering graduate programs).</p>
-    <p>I like to talk about my hobbies and this is my website so you cannot stop me muahaha.
-      I have a <s>secret</s> side interest in multimedia art and graphics. I am self taught
-      in <Utitle text=" photography," title="except two classes (one in high school and one in college" /> watercolors, 
-      charcoal drawing, calligraphy, ink/ pen drawings, <Utitle text="digital raster editing," title="I use GIMP" /> and
-      sometimes I use crayons. And more, I have a love for music, tabletop roleplaying games, cooking, and baking.
-    </p>
+	<h1>Hello, I'm Jess.</h1>
+	<p>I go by Jess, but my middle name is Laser Beam so if you call me that, that's ok with me.</p>
+	<p>I am a database administrator, IT manager, Google Workspace super admin, and network administrator at a middle school, for my own systems, and I help my friends as well. I mostly work with databases and IT management, but the rest of it falls under my management. I also run this website.</p>
+	<p>I happen to also be a trans woman and I am autistic. I am an ally to other queer folk, people of color, houseless people, and neurodivergent people. Though, generally, I'm pretty much up for standing up for anyone's rights. All people are people, and deserve thriving human rights. Trans women are women, black lives matter.</p>
   </div>
 );
 
 const homepage = (
   <div className="ContentContainer">
-    <h2>Welcome to <a href="https://lasershaft.com">Lasershaft.com!</a> where I put all my internet stuff.</h2>
-    <h3><a href="https://lasershaft.com/about">Who am I?</a></h3>
-    <h3>I write blog posts, it's a mishmash of whatever I feel like. <a href="https://lasershaft.com/blog">:0</a></h3>
-    <h3>Go see some pictures on <a href="https://lasershaft.com/art">my art page</a></h3>
+	<h1>Welcome to LS.</h1>
+	<h2>Jesella Barrett's Internet Home</h2>
+	<p>Jesella is a database administrator, IT manager, Google Workspace super admin, and network administrator specializing in education.</p>
+	<p>Go see my <a href="https://www.lasershaft.com/art">pictures</a></p>
+	<p>Play this silly <a href="https://www.lasershaft.com/numbergame">game I made.</p>
   </div>
 );
 
@@ -121,7 +114,7 @@ const forofor = (
 const Content = () => {
 	if (wl.i === "404") return forofor;
 	if (wl.i === "home") return homepage;
-	if (wl.i === "blog") return blog();
+	if (wl.i === "blog") return blog;
   if (wl.i === "art") return art();
   if (wl.i === "about") return about;
 };
