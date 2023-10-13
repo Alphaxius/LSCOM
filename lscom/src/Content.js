@@ -53,7 +53,7 @@ const blog = () => {
 }
 
 const art = () => {
-  let numarts = 1;
+  let numarts = 4;
   for (let n = 1; n < 17; n += 1) {
     if (Number(wl.q.n) === n) {
       numarts = n;
@@ -88,6 +88,7 @@ const about = (
 	<h1>Hello, I'm Jess.</h1>
 	<p>I go by Jess, but my middle name is Laser Beam so if you call me that, that's ok with me.</p>
 	<p>I am a database administrator, IT manager, Google Workspace super admin, and network administrator at a middle school, for my own systems, and I help my friends as well. I mostly work with databases and IT management, but the rest of it falls under my management. I also run this website.</p>
+	<p>I also have so many hobbies. I create <a href="https://www.lasershaft.com/art">art.</a> I make jewelry. I write letters to my pen pals. I help my friends with their IT needs.</p>
 	<p>I happen to also be a trans woman and I am autistic. I am an ally to other queer folk, people of color, houseless people, and neurodivergent people. Though, generally, I'm pretty much up for standing up for anyone's rights. All people are people, and deserve thriving human rights. Trans women are women, black lives matter.</p>
   </div>
 );
