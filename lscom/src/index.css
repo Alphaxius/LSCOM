@@ -5,15 +5,20 @@
 
 
 @media (prefers-color-scheme: dark) {
-  body {
-    color: lightgray;
-    background-color: #333344; 
+  body,
+  div,
+  p,
+  h2,
+  h3,
+  footer {
+    color: lightgray!important;
+    background-color: #333344!important; 
   }
   #navContainer {
-    color: #22222D;
+    color: #22222D!important;
   }
   a:link {
-	color: cyan;
+	color: cyan!important;
   }
 }
 
