@@ -31,7 +31,7 @@ label {
 }
 
 a:link {
-	color: cyan;
+	color: blue;
 }
 
 a:visited {
@@ -53,6 +53,9 @@ a:link:hover {
   }
   #navContainer {
     color: #22222D;
+  }
+  a:link {
+	color: cyan;
   }
 }
 
@@ -305,7 +308,5 @@ a.HiderNotHidden {
 	font-style: italic;
 	background-color: white;
 }
-
-
 
 

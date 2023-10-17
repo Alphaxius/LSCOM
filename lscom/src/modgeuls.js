@@ -22,11 +22,22 @@ const Gimage = (content) => {
     iframeheight = window.innerWidth * 0.450;
   }
   else {
-    iframewidth = window.innerWidth * 0.400;
-    iframeheight = window.innerWidth * 0.225;
+    if (Math.random() > 0.3) {
+      iframewidth = window.innerWidth * 0.400;
+      iframeheight = window.innerWidth * 0.225;
+    } else if (Math.random() > 0.3) {
+      iframewidth = window.innerWidth * 0.600;
+      iframeheight = window.innerWidth * 0.3375;
+    } else {
+      iframewidth = window.innerWidth * 0.800;
+      iframeheight = window.innerWidth * 0.450;
+    }
   }
+  iframewidth *= (Math.random()/10+0.95);
+  iframeheight *= (Math.random()/10+0.95);
   return (
     <iframe
+      className="Gimage"
       title={content.title}
       src={"https://drive.google.com/file/d/"+content.imageId+"/preview"}
       width={iframewidth}

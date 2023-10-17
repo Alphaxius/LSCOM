@@ -67,10 +67,10 @@ const arts = (numarts) => {
   }
   return artsblock;
 }
-
+/*
 const replaceArts = (numarts) => {
   const artcontainer = document.getElementById("innerArtsContainer");
-  /*const activearts = artcontainer.children;
+  const activearts = artcontainer.children;
   let maxIndex = 0;
   for (const activeart of activearts) {
       let index = 0;
@@ -83,15 +83,15 @@ const replaceArts = (numarts) => {
 	maxIndex = index;
       }
       activeart.style.display = "none";
-  }*/
+  }
   const newarts = arts(numarts);
   for (const nart of newarts) { 
     artcontainer.append(nart);
   }
 }
-
+*/
 class ArtGuy extends React.Component {
-  numarts = 4;
+  numarts = 3;
 
   state = {
     artsContainer: arts(this.numarts)
