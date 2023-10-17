@@ -140,7 +140,9 @@ const homepage = (
 	<h1>Welcome to LS.</h1>
 	<h2>Jesella Barrett's Internet Home</h2>
 	<p>Jesella is a database administrator, IT manager, Google Workspace super admin, and network administrator specializing in education.</p>
-	<p>Go see my <a href="https://www.lasershaft.com/art">pictures</a></p>
+	<p>Visit my <a href="https://www.lasershaft.com/linkedin">LinkedIn</a>.</p>
+	<p>See some code on my <a href="https://www.lasershaft.com/github/">GitHub</a>.</p>
+	<p>Go see my <a href="https://www.lasershaft.com/art">pictures</a>.</p>
 	<p>Play this silly <a href="https://www.lasershaft.com/numbergame">game I made.</a></p>
   </div>
 );
