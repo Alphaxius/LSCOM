@@ -14,6 +14,8 @@ import BlogReader, {blogIndex} from './blog/blogReader';
 //import Utitle from './Utitle';
 import {Utitle, Gimage} from './modgeuls';
 
+const artids = require("./artids.json");
+
 const blog = () => {
 	const index = blogIndex();
 	if (!index) return forofor; // should have ()?
@@ -52,60 +54,94 @@ const blog = () => {
 	}
 }
 
-const art = () => {
-  let numarts = 1;
-  for (let n = 1; n < 17; n += 1) {
-    if (Number(wl.q.n) === n) {
-      numarts = n;
-      break;
-    }
-  }
-  const artids = require("./artids.json");
+
+const arts = (numarts) => {
   let artidsdexes = [];
   for (let artidsdex = 0; artidsdex < numarts; artidsdex += 1) {
     artidsdexes.push(Math.floor(artids.length * Math.random()));
   }
-  let arts = [];
+  let artsblock = [];
   for (const artsdex of artidsdexes) {
     let id = artids[artsdex];
-    arts.push(<Gimage imageId={id} title={id} key={id} />);
+    artsblock.push(<Gimage imageId={id} title={id} key={id}/>);
   }
-  return (
+  return artsblock;
+}
+
+const replaceArts = (numarts) => {
+  const artcontainer = document.getElementById("innerArtsContainer");
+  /*const activearts = artcontainer.children;
+  let maxIndex = 0;
+  for (const activeart of activearts) {
+      let index = 0;
+      for (let indexChecker = 0; indexChecker <= 100; indexChecker += 1) {
+	if (activeart.classList.contains("pageIndex"+indexChecker)) {
+          index = indexChecker;
+	}
+      }
+      if (index > maxIndex) {
+	maxIndex = index;
+      }
+      activeart.style.display = "none";
+  }*/
+  const newarts = arts(numarts);
+  for (const nart of newarts) { 
+    artcontainer.append(nart);
+  }
+}
+
+class ArtGuy extends React.Component {
+  numarts = 4;
+
+  state = {
+    artsContainer: arts(this.numarts)
+  }
+  
+  init = () => {
+    for (let n = 1; n < 17; n += 1) {
+      if (Number(wl.q.n) === n) {
+        this.numarts = n;
+        break;
+      }
+    }
+  }
+
+  updateState = () => {
+    this.setState({artsContainer: this.state.artsContainer.concat(arts(this.numarts))});
+  }
+
+  render = () => {
+   return (
     <div className="ContentContainer">
-      <h2>This is a poorly made art portfolio. See up to 16 at a time!</h2>
+     <h2>An art portfolio by Jess!</h2>
       
       <p>Load <a href={wl.o + "/art?n=1"}>1</a> / <a href={wl.o + "/art?n=4"}>4</a> / <a href={wl.o + "/art?n=16"}>16</a> images</p>
-      <p><a href={window.location.href}>Get different pictures</a></p>
-      {arts}
-      <p style={{"font-size": "small", "margin-left": "20vw", "margin-right": "20vw"}}>I say poorly made in that the portfolio is poorly made. I actually think some of my stuff isn't that bad, but who am I to judge? There is no correct order to viewing things that I make, so you can only get these randomly. Titles for these works is not provided. Enjoy only the pixels without other context.<br /> License for these pieces is, with great trust in you, <i>"feel free to use and profit from these images but don't do the thing where you claim copyright on them and sue me, Jesella Laser Beam Barrett, for using them on my website. I would also appreciate it if you credited me, but you don't have to."</i></p>
+      {this.state.artsContainer}
+      <br /><div className="next BlogLink" style={{"color": "black"}} onClick={this.updateState}>More</div>
+      <p style={{"fontSize": "small", "marginLeft": "20vw", "marginRight": "20vw"}}>There is no correct order to viewing things that I make, so you can only get these randomly and often with multiplicity. Titles for these works are not provided. Enjoy only the pixels without other context.<br /> License for these pieces is, with great trust in you, <i>"feel free to use and profit from these images but don't do the thing where you claim copyright on them and sue me, Jesella Laser Beam Barrett, for using them on my website. I would also appreciate it if you credited me, but you don't have to."</i></p>
     </div>
   );
+  }
 }
 
 
 const about = (
   <div className="ContentContainer">
-    <h2>Ollo, call me Laser</h2>
-    <h3>About Me</h3>
-    <p>I'm Jess, I know some stuff about electronics and computers and the like.
-      I have a degree in electrical engineering, I minored in computer science and mathematics.
-      I'm seeking my CCNA as I work in IT and Database management. I'm seeking training in data science
-      (maybeee considering graduate programs).</p>
-    <p>I like to talk about my hobbies and this is my website so you cannot stop me muahaha.
-      I have a <s>secret</s> side interest in multimedia art and graphics. I am self taught
-      in <Utitle text=" photography," title="except two classes (one in high school and one in college" /> watercolors, 
-      charcoal drawing, calligraphy, ink/ pen drawings, <Utitle text="digital raster editing," title="I use GIMP" /> and
-      sometimes I use crayons. And more, I have a love for music, tabletop roleplaying games, cooking, and baking.
-    </p>
+	<h1>Hello, I'm Jess.</h1>
+	<p>I go by Jess, but my middle name is Laser Beam so if you call me that, that's ok with me.</p>
+	<p>I am a database administrator, IT manager, Google Workspace super admin, and network administrator at a middle school, for my own systems, and I help my friends as well. I mostly work with databases and IT management, but the rest of it falls under my management. I also run this website.</p>
+	<p>I also have so many hobbies. I create <a href="https://www.lasershaft.com/art">art.</a> I make jewelry. I write letters to my pen pals. I help my friends with their IT needs.</p>
+	<p>I happen to also be a trans woman and I am autistic. I am an ally to other queer folk, people of color, houseless people, and neurodivergent people. Though, generally, I'm pretty much up for standing up for anyone's rights. All people are people, and deserve thriving human rights. Trans women are women, black lives matter.</p>
   </div>
 );
 
 const homepage = (
   <div className="ContentContainer">
-    <h2>Welcome to <a href="https://lasershaft.com">Lasershaft.com!</a> where I put all my internet stuff.</h2>
-    <h3><a href="https://lasershaft.com/about">Who am I?</a></h3>
-    <h3>I write blog posts, it's a mishmash of whatever I feel like. <a href="https://lasershaft.com/blog">:0</a></h3>
-    <h3>Go see some pictures on <a href="https://lasershaft.com/art">my art page</a></h3>
+	<h1>Welcome to LS.</h1>
+	<h2>Jesella Barrett's Internet Home</h2>
+	<p>Jesella is a database administrator, IT manager, Google Workspace super admin, and network administrator specializing in education.</p>
+	<p>Go see my <a href="https://www.lasershaft.com/art">pictures</a></p>
+	<p>Play this silly <a href="https://www.lasershaft.com/numbergame">game I made.</a></p>
   </div>
 );
 
@@ -121,8 +157,8 @@ const forofor = (
 const Content = () => {
 	if (wl.i === "404") return forofor;
 	if (wl.i === "home") return homepage;
-	if (wl.i === "blog") return blog();
-  if (wl.i === "art") return art();
+	if (wl.i === "blog") return blog;
+  if (wl.i === "art") return <ArtGuy />;
   if (wl.i === "about") return about;
 };
 

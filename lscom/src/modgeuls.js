@@ -15,12 +15,22 @@ const Utitle = (content) => {
 }
 
 const Gimage = (content) => {
+  let iframewidth = 0;
+  let iframeheight = 0;
+  if (window.innerWidth < window.innerHeight) {
+    iframewidth = window.innerWidth * 0.800;
+    iframeheight = window.innerWidth * 0.450;
+  }
+  else {
+    iframewidth = window.innerWidth * 0.400;
+    iframeheight = window.innerWidth * 0.225;
+  }
   return (
     <iframe
       title={content.title}
       src={"https://drive.google.com/file/d/"+content.imageId+"/preview"}
-      width={window.innerWidth * 0.80}
-      height={window.innerWidth * 0.45}
+      width={iframewidth}
+      height={iframeheight}
     >
     </iframe>
   );
