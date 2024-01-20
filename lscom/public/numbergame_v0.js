@@ -22,8 +22,13 @@
 
 
 function hideInstructionParagraph() {
-	document.getElementById("instructionParagraph").classList.toggle("hidden");
-	setCookie("hideInstructionParagraph",true,30);
+	const instructionParagraph = document.getElementById("instructionParagraph");
+	if(!("classList" in instructionParagraph)) return;
+	setCookie(
+		"hideInstructionParagraph",
+		instructionParagraph.classList.toggle("hidden"),
+		30
+	);
 }
 
 function randInt(min, max) {
