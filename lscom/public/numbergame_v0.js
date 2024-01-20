@@ -15,21 +15,9 @@
 
 
 // TODO undo function
-// TODO instructions toggle cookie
-// TODO score keeping cookie
-// TODO apply stylesheets
 
 
 
-function hideInstructionParagraph() {
-	const instructionParagraph = document.getElementById("instructionParagraph");
-	if(!("classList" in instructionParagraph)) return;
-	setCookie(
-		"hideInstructionParagraph",
-		instructionParagraph.classList.toggle("hidden"),
-		30
-	);
-}
 
 function randInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -487,13 +475,14 @@ class Score {
 class GameCookie {
 	constructor() {
 		this.totalScore = 0;
+		this.hideInstructionParagraph = false;
 		let cookies = decodeURIComponent(document.cookie).split(";");
 		for(let cookie of cookies) {
 			cookie = cookie.trim();
 			if(cookie.indexOf("totalScore") === 0) {
 				this.totalScore = Number(cookie.slice(11));
 			} else if(cookie.indexOf("hideInstructionParagraph") === 0) {
-				if(cookie.slice(25) === "true") hideInstructionParagraph();
+				this.hideInstructionParagraph = (cookie.slice(25) === "true");
 			}
 		}
 	}
@@ -507,6 +496,32 @@ class newGameButton {
 	constructor() {}
 	display() {
 		return "<input type='button' value='New Game' onclick='location.reload()' />";
+	}
+}
+
+class InstructionParagraph {
+	constructor(hide) {
+		this.hide = hide;
+	}
+	display() {
+	return `
+		<br><br>
+		<div>
+			<input
+				type='button'
+				onclick='pageRunner.hideInstructionParagraph()'
+				value="Toggle Instructions"
+			/>
+			<p id='instructionParagraph' class='${this.hide ? "hidden" : ""}'>
+			Choose an operator and two numbers, then press equals to
+			complete the operation. You can deselect a number or operator by
+			clicking the button again. Dividing provides the integer division
+			and modulo values (exact division does not return zero modulo!).
+			<br>
+			Try to get a high score!
+			</p>
+		</div>
+		`
 	}
 }
 
@@ -527,6 +542,16 @@ class PageRunner {
 		this.endGameStateFlag = false;
 		this.totalScore = new TotalScore(this.gameCookie.totalScore);
 		this.newGameButton = new newGameButton();
+		this.instructionParagraph = new InstructionParagraph(this.gameCookie.hideInstructionParagraph);
+	}
+	hideInstructionParagraph() {
+		this.instructionParagraph.hide = !this.instructionParagraph.hide;
+		setCookie(
+			"hideInstructionParagraph",
+			this.instructionParagraph.hide,
+			30
+		);
+		this.updatePage();
 	}
  	numberClick(id) {
 		if(this.numberContainer.selectNumber(id)) {
@@ -650,6 +675,7 @@ class PageRunner {
 				${this.numberContainer.display()}
 				${this.operationHistory.display()}
 				${this.newGameButton.display()}
+				${this.instructionParagraph.display()}
 			`;
 		}
 		return `
@@ -662,7 +688,8 @@ class PageRunner {
 			${this.numberContainer.display()}
 			${this.numberMagazine.display()}
 			${this.operationHistory.display()}
-			<br>${this.endGameButton.display()}
+			<br />${this.endGameButton.display()}
+			${this.instructionParagraph.display()}
 		`;
 	}
 	updatePage() {
