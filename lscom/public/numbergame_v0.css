@@ -27,6 +27,8 @@ input {
 #instructionParagraph {
 	font-family: source-sans-pro, sans-serif;
 	font-size: 12pt;
+	margin: 2%;
+	padding: 2%;
 }
 
 .operatorsContainer {
