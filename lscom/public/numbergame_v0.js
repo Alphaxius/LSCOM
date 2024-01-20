@@ -546,7 +546,7 @@ class PageRunner {
 			this.score.addPoints(this.endGameNotExactPoints());
 		}
 		this.totalScore.points += this.score.currentScore();
-		this.gameCookie.addPoints(this.totalScore.points);
+		this.gameCookie.addPoints(this.score.currentScore());
 		this.updatePage();
 	}
 	checkValue(answerList) {
