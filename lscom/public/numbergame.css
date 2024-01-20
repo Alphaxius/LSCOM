@@ -1,0 +1,95 @@
+
+* {
+	text-align: center;
+	font-size: 16pt;
+	font-family: 'Courgette', cursive;
+	color: #B2B2B2;
+	background-color: #4C4C4C;
+}
+
+body {
+	background-color: #4C4C4C!important;
+}
+
+h1 {
+	font-size: 20pt;
+}
+
+p {
+	line-height: 0.8em;
+}
+
+input {
+	padding: 2%;
+	margin: 1.5%;
+	border-style: dotted;
+	border-color: black;
+	border-width: thick;
+	border-radius: 100px;
+}
+
+#instructionParagraph {
+	font-family: source-sans-pro, sans-serif;
+	font-size: 12pt;
+	margin: 2%;
+	padding: 2%;
+}
+
+.score {
+	display: inline;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.currentOperation {
+	height: 3em;
+	line-height: 3em;
+}
+
+.operatorsContainer {
+	margin-top: 2%;
+	margin-left: 10%;
+	display: grid;
+	width: 80%;
+	height: 3em;
+	grid-template-columns: repeat(4, 0.8fr);
+	grid-template-rows: 1fr;
+	align-content: center;
+	justify-content: space-evenly;
+	
+}
+
+.operationButton {
+	width: 80%;
+	font-weight: bold;
+}
+
+.newNumberContainer {
+	margin-top: 2%;
+}
+
+.numberContainer {
+	margin-top: 2%;
+	margin-left: 7.5%;
+	display: grid;
+	width: 80%;
+	height: 9em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	align-content: center;
+	justify-content: space-evenly;
+}
+
+.individualNumber {
+	width: 80%;
+	margin: 15%;
+	display: center;
+}
+
+.selected {
+	background-color: #333333;
+}
+
+.hidden {
+	display: none;
+}
