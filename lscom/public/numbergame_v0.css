@@ -7,6 +7,10 @@
 	background-color: #4C4C4C;
 }
 
+body {
+	background-color: #4C4C4C!important;
+}
+
 h1 {
 	font-size: 20pt;
 }
@@ -26,6 +30,7 @@ input {
 }
 
 .operatorsContainer {
+	margin-top: 5%;
 	margin-left: 10%;
 	display: grid;
 	width: 80%;
@@ -40,7 +45,12 @@ input {
 	font-weight: bold;
 }
 
+.newNumberContainer {
+	margin-top: 5%;
+}
+
 .numberContainer {
+	margin-top:5%;
 	margin-left: 7.5%;
 	display: grid;
 	width: 80%;

@@ -226,7 +226,7 @@ class NumberMagazine {
 	}
 	display() {
 		return `
-			<div>
+			<div class='newNumberContainer'>
 				${this.newNumberDisplay()}
 				<br>${this.eggsDisplay()}
 			</div>
