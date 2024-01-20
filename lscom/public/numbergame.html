@@ -83,11 +83,12 @@
 			for (const opCell of operationCellActive) {
 				opCellValue = opCell.value;
 			}
-			const opFuncs = [(a,b)=>{return parseInt(a)+parseInt(b)},
-											 (a,b)=>{return parseInt(a)-parseInt(b)},
-											 (a,b)=>{return parseInt(a)*parseInt(b)},
-											 (a,b)=>{return parseInt(a)/parseInt(b)}
-											];
+			const opFuncs = [
+				(a,b)=>{return parseInt(a)+parseInt(b)},
+				(a,b)=>{return parseInt(a)-parseInt(b)},
+				(a,b)=>{return parseInt(a)*parseInt(b)},
+				(a,b)=>{return Math.floor(parseInt(a)/parseInt(b))}
+			];
 			const opFunc = opFuncs[opCellValue];
 			
 			// perform operation
@@ -227,7 +228,7 @@
 	<div class="innercontentcontainer">
 		<div id="headercontainer">
 			<h1>Make the Number</h1>
-			<p>Choose an operation, then choose two numbers.</p>
+			<p>Choose an operation, then choose two numbers. <i>Integer division!</i></p>
 		</div>
 		<h2 class="numbertoguess" id="numbertoguess">100</h2>
 		<div class="operationsgrid bordered">
