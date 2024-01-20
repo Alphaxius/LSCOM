@@ -313,15 +313,20 @@ class CurrentOperation {
 		}
 		return "";
 	}
+	opDisplay() {
+		if(this.op === "/") return "÷";
+		else if(this.op === "*") return "×";
+		else if(this.op === "-") return "−";
+		else if(this.op === "+") return "+";
+		else return "";
+	}
 	display() {
 		return `
 			<div class='currentOperation'>
-				<p>
-					${Object.keys(this.ln).length === 0 ? "" : this.ln.value}
-					${this.op}
-					${Object.keys(this.rn).length === 0 ? "" : this.rn.value}
-					${this.readyForAnsHTML()}
-				</p>
+				${Object.keys(this.ln).length === 0 ? "" : this.ln.value}
+				${this.opDisplay()}
+				${Object.keys(this.rn).length === 0 ? "" : this.rn.value}
+				${this.readyForAnsHTML()}
 			</div>
 		`;
 	}

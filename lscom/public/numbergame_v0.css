@@ -15,6 +15,10 @@ h1 {
 	font-size: 20pt;
 }
 
+p {
+	line-height: 0.8em;
+}
+
 input {
 	padding: 2%;
 	margin: 1.5%;
@@ -31,12 +35,25 @@ input {
 	padding: 2%;
 }
 
+.score {
+	display: inline;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.currentOperation {
+	height: 3em;
+	line-height: 3em;
+}
+
 .operatorsContainer {
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 10%;
 	display: grid;
 	width: 80%;
-	grid-template-columns: repeat(4, 20%);
+	height: 3em;
+	grid-template-columns: repeat(4, 0.8fr);
+	grid-template-rows: 1fr;
 	align-content: center;
 	justify-content: space-evenly;
 	
@@ -48,15 +65,17 @@ input {
 }
 
 .newNumberContainer {
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 .numberContainer {
-	margin-top:5%;
+	margin-top: 2%;
 	margin-left: 7.5%;
 	display: grid;
 	width: 80%;
-	grid-template-columns: repeat(3, 33%);
+	height: 9em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	align-content: center;
 	justify-content: space-evenly;
 }
