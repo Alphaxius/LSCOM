@@ -9,11 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Numbergame - Lasershaft</title>
 	<script src="numbergame_v0.js"></script>
-	<style>
-		.hidden {
-			display: none;
-		}
-	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link href="numbergame_v0.css" type="text/css" rel="stylesheet"></link>
 </head>
 <body onload="pageRunner.updatePage()">
 	<h1>Lasershaft Numbergame</h1>
@@ -22,7 +21,7 @@
 	<div>
 		<input
 			type='button'
-			onclick='document.getElementById("instructionParagraph").classList.toggle("hidden")'
+			onclick='hideInstructionParagraph()'
 			value="Toggle Instructions"
 		/>
 		<p id='instructionParagraph'>

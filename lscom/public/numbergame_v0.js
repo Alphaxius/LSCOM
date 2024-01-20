@@ -21,7 +21,10 @@
 
 
 
-
+function hideInstructionParagraph() {
+	document.getElementById("instructionParagraph").classList.toggle("hidden");
+	setCookie(hideInstructionParagraph,true,30);
+}
 
 function randInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,6 +50,33 @@ function uid() {
 	}
 	return localString;
 }
+
+
+//https://www.w3schools.com/js/js_cookies.asp
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LocalNumber {
 	constructor(value, id) {
@@ -198,7 +228,7 @@ class NumberMagazine {
 		return `
 			<div>
 				${this.newNumberDisplay()}
-				${this.eggsDisplay()}
+				<br>${this.eggsDisplay()}
 			</div>
 		`;
 	}
@@ -219,17 +249,17 @@ class OperatorButtons {
 				<input type='button' 
 					onclick='pageRunner.opClick("-")'
 					class='operationButton${this.currentSelection === '-' ? ' selected' : ''}'
-					value='-'
+					value='−'
 				></input> 
 				<input type='button' 
 					onclick='pageRunner.opClick("*")'
 					class='operationButton${this.currentSelection === '*' ? ' selected' : ''}'
-					value='*'
+					value='×'
 				></input> 
 				<input type='button' 
 					onclick='pageRunner.opClick("/")'
 					class='operationButton${this.currentSelection === '/' ? ' selected' : ''}'
-					value='/'
+					value='÷'
 				></input>
 			</div>
 		`;
@@ -407,7 +437,7 @@ class GoalValue {
 		this.value = randInt(100,500);
 	}
 	display() {
-		return `<p class="goalValue">Goal Value: ${this.value}</p>`
+		return `<p class="goalValue">Goal Value: <b>${this.value}</b></p>`
 	}
 }
 
@@ -423,7 +453,7 @@ class TotalScore {
 		this.points = points;
 	}
 	display() {
-		return `<p class='score'>Total Score: ${this.points}</p>`;
+		return `<p class='score'>Total Score: <b>${this.points}</b></p>`;
 	}
 }
 
@@ -445,16 +475,8 @@ class Score {
 		this.values.push(newValue - penalty);
 	}
 	display() {
-		return `<p class='score'>Score: ${this.currentScore()}</p>`;
+		return `<p class='score'>Score: <b>${this.currentScore()}</b></p>`;
 	}
-}
-
-//https://www.w3schools.com/js/js_cookies.asp
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 class GameCookie {
@@ -465,6 +487,8 @@ class GameCookie {
 			cookie = cookie.trim();
 			if(cookie.indexOf("totalScore") === 0) {
 				this.totalScore = Number(cookie.slice(11));
+			} else if(cookie.indexOf("hideInstructionParagraph") === 0) {
+				if(cookie.slice(25) === "true") hideInstructionParagraph();
 			}
 		}
 	}

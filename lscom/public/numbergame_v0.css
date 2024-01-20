@@ -1,0 +1,64 @@
+
+* {
+	text-align: center;
+	font-size: 16pt;
+	font-family: 'Courgette', cursive;
+	color: #B2B2B2;
+	background-color: #4C4C4C;
+}
+
+h1 {
+	font-size: 20pt;
+}
+
+input {
+	padding: 2%;
+	margin: 1.5%;
+	border-style: dotted;
+	border-color: black;
+	border-width: thick;
+	border-radius: 100px;
+}
+
+#instructionParagraph {
+	font-family: source-sans-pro, sans-serif;
+	font-size: 12pt;
+}
+
+.operatorsContainer {
+	margin-left: 10%;
+	display: grid;
+	width: 80%;
+	grid-template-columns: repeat(4, 20%);
+	align-content: center;
+	justify-content: space-evenly;
+	
+}
+
+.operationButton {
+	width: 80%;
+	font-weight: bold;
+}
+
+.numberContainer {
+	margin-left: 7.5%;
+	display: grid;
+	width: 80%;
+	grid-template-columns: repeat(3, 33%);
+	align-content: center;
+	justify-content: space-evenly;
+}
+
+.individualNumber {
+	width: 80%;
+	margin: 15%;
+	display: center;
+}
+
+.selected {
+	background-color: #333333;
+}
+
+.hidden {
+	display: none;
+}
