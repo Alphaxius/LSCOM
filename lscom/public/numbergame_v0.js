@@ -464,7 +464,7 @@ class GameCookie {
 		for(let cookie of cookies) {
 			cookie = cookie.trim();
 			if(cookie.indexOf("totalScore") === 0) {
-				this.totalScore = cookie.slice(11);
+				this.totalScore = Number(cookie.slice(11));
 			}
 		}
 	}
@@ -512,6 +512,9 @@ class PageRunner {
 		}
 		this.updatePage();
 	}
+	eggScore() {
+		return this.numberMagazine.numEggsRemaining * 50;
+	}
 	endGameNotExactPoints() {
 		const goal = this.goalValue.value;
 		const numbers = this.numberContainer.slots;
@@ -524,7 +527,7 @@ class PageRunner {
 			differences.push(Math.abs(goal - value));
 		}
 		const minimumDifference = Math.min(differences);
-		const eggScore = this.numberMagazine.numEggsRemaining * 30;
+		const eggScore = this.eggScore();
 		if(minimumDifference > 49) return 50 + eggScore;
 		else if(minimumDifference > 24) return 75 + eggScore;
 		else if(minimumDifference > 9) return 100 + eggScore;
@@ -537,8 +540,7 @@ class PageRunner {
 		this.endGameStateFlag = true;
 		if(correct) {
 			this.gameState.nextState("Good job!");
-			const eggScore = this.numberMagazine.numEggsRemaining * 30;
-			this.score.addPoints(300 + eggScore);
+			this.score.addPoints(300 + this.eggScore());
 		} else {
 			this.gameState.nextState("Game over!");
 			this.score.addPoints(this.endGameNotExactPoints());
