@@ -31,14 +31,15 @@ input {
 #instructionParagraph {
 	font-family: source-sans-pro, sans-serif;
 	font-size: 12pt;
+	line-height: 16pt;
 	margin: 2%;
 	padding: 2%;
 }
 
 .score {
 	display: inline;
-	margin-left: 1em;
-	margin-right: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 .currentOperation {
